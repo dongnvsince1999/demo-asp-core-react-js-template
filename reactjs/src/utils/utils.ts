@@ -71,7 +71,7 @@ class Utils {
       return localizedAppName;
     }
 
-    return L(route[0].title) + ' | ' + localizedAppName;
+    return window.location.pathname === "/" ? "Hellowork" : L(route[0].title);
   };
 
   getRoute = (path: string): any => {

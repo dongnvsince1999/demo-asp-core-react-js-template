@@ -12,11 +12,13 @@ export interface ILogoutProps {
 class Logout extends React.Component<ILogoutProps> {
   componentDidMount() {
     this.props.authenticationStore!.logout();
-    window.location.href = '/';
+    console.log("logout");
+    // window.location.href = '/';
   }
 
   render() {
-    return null;
+    // co
+    return window.location.href = '/';
   }
 }
 

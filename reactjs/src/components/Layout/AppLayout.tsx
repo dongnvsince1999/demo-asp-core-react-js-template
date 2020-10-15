@@ -10,10 +10,11 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Layout } from 'antd';
 import ProtectedRoute from '../../components/Router/ProtectedRoute';
-import SiderMenu from '../../components/SiderMenu';
 
 import { appRouters } from '../Router/router.config';
 import utils from '../../utils/utils';
+import SiderMenu from 'components/SiderMenu';
+
 // import NotFoundRoute from '../Router/NotFoundRoute';
 
 const { Content } = Layout;
@@ -44,11 +45,9 @@ class AppLayout extends React.Component<any> {
 
     const layout = (
       <Layout style={{ minHeight: '100vh' }}>
-        {/* {path == "/dashboard" && <SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} />} */}
-        {/* {path == "/" && <Home/>} */}
 
         {console.log(path)}
-        <SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} />
+        {path === "/dashboard" ? < SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /> : <div></div>}
 
         <Layout>
           <Layout.Header style={{ background: '#fff', minHeight: 52, padding: 0 }}>
@@ -56,11 +55,6 @@ class AppLayout extends React.Component<any> {
           </Layout.Header>
           <Content style={{ margin: 16 }}>
             <Switch>
-
-              {pathname === '/' && <div>Demo Home</div>}
-              {/* <Redirect from="/" to="/dashboard" />} */}
-              {/* <SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /> */}
-
               {appRouters
                 .filter((item: any) => !item.isLayout)
                 .map((route: any, index: any) => (

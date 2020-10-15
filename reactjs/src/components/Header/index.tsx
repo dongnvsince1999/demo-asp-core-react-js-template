@@ -2,13 +2,14 @@ import './index.less';
 
 import * as React from 'react';
 
-import { Avatar, Badge, Col, Dropdown, Icon, Menu, Row } from 'antd';
+import { Avatar, Badge, Dropdown, Icon, Menu } from 'antd';
 
 import { L } from '../../lib/abpUtility';
 import LanguageSelect from '../LanguageSelect';
 import { Link } from 'react-router-dom';
 
 import profilePicture from '../../images/user.png';
+// import Logout from 'components/Logout';
 
 export interface IHeaderProps {
   collapsed?: any;
@@ -32,19 +33,36 @@ export class Header extends React.Component<IHeaderProps> {
     //code for menu item
 
     return (
-      <Row className={'header-container'}>
-        <Col style={{ textAlign: 'left' }} span={12}>
-          <Icon className="trigger" type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={this.props.toggle} />
-        </Col>
-        <Col style={{ padding: '0px 15px 0px 15px', textAlign: 'right' }} span={12}>
-          <LanguageSelect /> {'   '}
+      // <div className={'header-container '} style = {{justifyContent: "space-between !important", width: "100%"}}>
+      <div className={'header-container'} >
+        <div style={{ display: "flex" }}>
+          {window.location.pathname === "/dashboard" ?
+            <div style={{ textAlign: 'left' }} >
+              <Icon className="trigger" type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={this.props.toggle} />
+            </div> :
+            <div  >
+              <div style={{ width: "30px", height: "30px", background: "green" }}>Logo</div>
+            </div>}
+
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Việc làm</div>
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Phỏng vấn</div>
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Công ty</div>
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Nhà tuyển dụng</div>
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >
+            <Link to="/dashboard">
+              Quản trị
+           </Link>
+          </div >
+        </div>
+        <div style={{ padding: '0px 8px 0px 8px', textAlign: 'right' }} >
+          <LanguageSelect /> {' '}
           <Dropdown overlay={userDropdownMenu} trigger={['click']}>
             <Badge style={{}} count={3}>
-              <Avatar style={{height:24, width:24}} shape="circle" alt={'profile'} src={profilePicture} />
+              <Avatar style={{ height: 24, width: 24 }} shape="circle" alt={'profile'} src={profilePicture} />
             </Badge>
           </Dropdown>
-        </Col>
-      </Row>
+        </div>
+      </div >
     );
   }
 }
