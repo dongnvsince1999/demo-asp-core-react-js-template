@@ -28,6 +28,9 @@ const userDropdownMenu = (
 
 export class Header extends React.Component<IHeaderProps> {
   render() {
+
+    //code for menu item
+
     return (
       <Row className={'header-container'}>
         <Col style={{ textAlign: 'left' }} span={12}>

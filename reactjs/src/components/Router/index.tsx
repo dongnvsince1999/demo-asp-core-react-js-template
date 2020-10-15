@@ -7,12 +7,14 @@ import utils from '../../utils/utils';
 
 const Router = () => {
   const UserLayout = utils.getRoute('/user').component;
-  const AppLayout = utils.getRoute('/').component;
+  const AppLayout = utils.getRoute('/dashboard').component;
+  const Home = utils.getRoute('/').component;
 
   return (
     <Switch>
       <Route path="/user" render={(props: any) => <UserLayout {...props} />} />
-      <ProtectedRoute path="/" render={(props: any) => <AppLayout {...props} exact />} />
+      <ProtectedRoute path="/dashboard" render={(props: any) => <AppLayout {...props} exact />} />
+      <Route path="/" exact render={(props: any) => <Home {...props} />} />
     </Switch>
   );
 };
