@@ -5,9 +5,9 @@ import * as React from 'react';
 
 import { Dropdown, Icon, Menu } from 'antd';
 
-import { L } from '../../lib/abpUtility';
-import Stores from '../../stores/storeIdentifier';
-import UserStore from '../../stores/userStore';
+import { L } from 'shared/lib/abpUtility';
+import Stores from 'shared/stores/storeIdentifier';
+import UserStore from 'shared/stores/userStore';
 import classNames from 'classnames';
 import { inject } from 'mobx-react';
 

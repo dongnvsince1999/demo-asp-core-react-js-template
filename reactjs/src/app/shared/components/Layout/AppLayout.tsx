@@ -2,82 +2,40 @@ import './AppLayout.less';
 
 import * as React from 'react';
 
-// import { Redirect, Switch, Route } from 'react-router-dom';
-import { Switch, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
+import { Col } from 'antd';
 import DocumentTitle from 'react-document-title';
 import Footer from '../Footer';
-import Header from '../Header';
-import { Layout } from 'antd';
-import ProtectedRoute from '../Router/ProtectedRoute';
-
-import { appRouters } from '../Router/router.config';
-import utils from '../../utils/utils';
-import SiderMenu from 'components/SiderMenu';
-
-// import NotFoundRoute from '../Router/NotFoundRoute';
-
-const { Content } = Layout;
+import LanguageSelect from '../LanguageSelect';
+import { userRouter } from '../Router/router.config';
+import utils from 'shared/utils/utils';
 
 class AppLayout extends React.Component<any> {
-  state = {
-    collapsed: false,
-  };
-
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  };
-
-  onCollapse = (collapsed: any) => {
-    this.setState({ collapsed });
-  };
-
   render() {
     const {
-      history,
       location: { pathname },
     } = this.props;
 
-    const { path } = this.props.match;
-    const { collapsed } = this.state;
+    return (
+      <DocumentTitle title={utils.getPageTitle(pathname)}>
+        <Col className="container">
+          <div className={'lang'}>
+            <LanguageSelect />
+          </div>
+          <Switch>
+            {userRouter
+              .filter((item: any) => !item.isLayout)
+              .map((item: any, index: number) => (
+                <Route key={index} path={item.path} component={item.component} exact={item.exact} />
+              ))}
 
-    const layout = (
-      <Layout style={{ minHeight: '100vh' }}>
-
-        {console.log(path.length)}
-
-
-        {path === "/dashboard" ? < SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /> : <div></div>}
-
-        <Layout>
-          <Layout.Header style={{ background: '#fff', minHeight: 52, padding: 0 }}>
-            <Header collapsed={this.state.collapsed} toggle={this.toggle} />
-          </Layout.Header>
-          <Content style={{ margin: 16 }}>
-            <Switch>
-              {appRouters
-                .filter((item: any) => !item.isLayout)
-                .map((route: any, index: any) => (
-                  <Route
-                    exact
-                    key={index}
-                    path={route.path}
-                    render={props => <ProtectedRoute component={route.component} permission={route.permission} />}
-                  />
-                ))}
-              {/* {pathname !== '/' && <NotFoundRoute />} */}
-            </Switch>
-          </Content>
-          <Layout.Footer style={{ textAlign: 'center' }}>
-            <Footer />
-          </Layout.Footer>
-        </Layout>
-      </Layout>
+            <Redirect from="/user" to="/user/login" />
+          </Switch>
+          <Footer />
+        </Col>
+      </DocumentTitle>
     );
-
-    return <DocumentTitle title={utils.getPageTitle(pathname)}>{layout}</DocumentTitle>;
   }
 }
 

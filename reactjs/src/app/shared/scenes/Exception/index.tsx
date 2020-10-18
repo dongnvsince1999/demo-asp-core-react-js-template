@@ -5,9 +5,9 @@ import * as React from 'react';
 import { Avatar, Button, Col, Row } from 'antd';
 
 import { Link } from 'react-router-dom';
-import error401 from '../../images/401.png';
-import error404 from '../../images/404.png';
-import error500 from '../../images/500.png';
+import error401 from 'assets/images/401.png';
+import error404 from 'assets/images/404.png';
+import error500 from 'assets/images/500.png';
 
 class Exception extends React.Component<any, any> {
   public render() {

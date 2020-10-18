@@ -1,4 +1,4 @@
-import { L } from '../../../lib/abpUtility';
+import { L } from 'shared/lib/abpUtility';
 
 const rules = {
   name: [{ required: true, message: L('ThisFieldIsRequired') }],

@@ -2,10 +2,10 @@ import './App.css';
 
 import * as React from 'react';
 
-import Router from './components/Router';
-import SessionStore from './stores/sessionStore';
-import SignalRAspNetCoreHelper from './lib/signalRAspNetCoreHelper';
-import Stores from './stores/storeIdentifier';
+import Router from 'app/shared/components/Router';
+import SessionStore from 'shared/stores/sessionStore';
+import SignalRAspNetCoreHelper from 'shared/lib/signalRAspNetCoreHelper';
+import Stores from 'shared/stores/storeIdentifier';
 import { inject } from 'mobx-react';
 
 export interface IAppProps {

@@ -5,9 +5,9 @@ import { Form, Input, Modal, Tabs } from 'antd';
 import CheckboxGroup from 'antd/lib/checkbox/Group';
 import { FormComponentProps } from 'antd/lib/form';
 import FormItem from 'antd/lib/form/FormItem';
-import { GetAllPermissionsOutput } from '../../../services/role/dto/getAllPermissionsOutput';
-import { L } from '../../../lib/abpUtility';
-import RoleStore from '../../../stores/roleStore';
+import { GetAllPermissionsOutput } from 'shared/services/role/dto/getAllPermissionsOutput';
+import { L } from 'shared/lib/abpUtility';
+import RoleStore from 'shared/stores/roleStore';
 import rules from './createOrUpdateRole.validation';
 
 const TabPane = Tabs.TabPane;
@@ -80,7 +80,7 @@ class CreateOrUpdateRole extends React.Component<ICreateOrUpdateRoleProps> {
         okText={L('OK')}
         onCancel={this.props.onCancel}
         title={L('Role')}
-        onOk={this.props.onOk}
+        onOk={this.props.onOk} 
       >
         <Tabs defaultActiveKey={'role'} size={'small'} tabBarGutter={64}>
           <TabPane tab={L('RoleDetails')} key={'role'}>

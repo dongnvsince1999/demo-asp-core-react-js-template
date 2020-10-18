@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Row, Col, Card, Icon } from 'antd';
 import './index.less';
-import TinyLineChartExample from 'components/TinyLineChartExample';
-import BarChartExample from 'components/BarChartExample';
-import PieChartExample from 'components/PieChartExample';
-import LineChartExample from 'components/LineChartExample';
-import ListExample from 'components/ListExample';
+import TinyLineChartExample from 'app/shared/components/TinyLineChartExample';
+import BarChartExample from 'app/shared/components/BarChartExample';
+import PieChartExample from 'app/shared/components/PieChartExample';
+import LineChartExample from 'app/shared/components/LineChartExample';
+import ListExample from 'app/shared/components/ListExample';
 
 export class Dashboard extends React.Component<any> {
   componentDidMount() {

@@ -3,13 +3,14 @@ import './index.less';
 import * as React from 'react';
 
 import { Avatar, Col, Icon, Layout, Menu } from 'antd';
-import { L, isGranted } from '../../lib/abpUtility';
+import { L, isGranted } from 'shared/lib/abpUtility';
 
-import Logo from '../../images/abp-logo-long.png';
+import Logo from 'assets/images/abp-logo-long.png';
 import { appRouters } from '../Router/router.config';
 
 const { Sider } = Layout;
 
+//Add more option in a config file.
 export interface ISiderMenuProps {
   path: any;
   collapsed: boolean;

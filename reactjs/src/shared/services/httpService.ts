@@ -25,8 +25,8 @@ http.interceptors.request.use(
 
     config.headers.common['.AspNetCore.Culture'] = abp.utils.getCookieValue('Abp.Localization.CultureName');
     config.headers.common['Abp.TenantId'] = abp.multiTenancy.getTenantIdCookie();
-    // config.headers.common['Access-Control-Allow-Origin'] = "*";
-    // config.headers.common['crossdomain'] = true;
+    config.headers.common['Access-Control-Allow-Origin'] = "*";
+    config.headers.common['crossdomain'] = true;
     console.log(config);
 return config;
   },

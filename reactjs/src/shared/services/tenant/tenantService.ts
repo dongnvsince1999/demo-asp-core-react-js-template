@@ -1,9 +1,9 @@
 import CreateTenantInput from './dto/createTenantInput';
 import CreateTenantOutput from './dto/createTenantOutput';
-import { EntityDto } from '../../services/dto/entityDto';
+import { EntityDto } from 'shared/services/dto/entityDto';
 import { GetAllTenantOutput } from './dto/getAllTenantOutput';
 import GetTenantOutput from './dto/getTenantOutput';
-import { PagedResultDto } from '../../services/dto/pagedResultDto';
+import { PagedResultDto } from 'shared/services/dto/pagedResultDto';
 import {PagedTenantResultRequestDto} from './dto/PagedTenantResultRequestDto';
 import UpdateTenantInput from './dto/updateTenantInput';
 import UpdateTenantOutput from './dto/updateTenantOutput';

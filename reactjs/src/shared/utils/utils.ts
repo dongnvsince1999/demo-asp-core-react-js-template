@@ -1,7 +1,7 @@
-import * as abpTypings from '../lib/abp';
+import * as abpTypings from 'shared/lib/abp';
 
-import { L } from '../lib/abpUtility';
-import { routers } from '../components/Router/router.config';
+import { L } from 'shared/lib/abpUtility';
+import { routers } from 'app/shared/components/Router/router.config';
 
 declare var abp: any;
 
