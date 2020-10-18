@@ -13,6 +13,9 @@ namespace SE347.L11_DemoApp
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<L11_DemoAppAuthorizationProvider>();
+
+            // add custom auto mapper
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(AutoMapperProfiles.Config);
         }
 
         public override void Initialize()
