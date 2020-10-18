@@ -6,10 +6,10 @@ import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import DocumentTitle from 'react-document-title';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import Footer from '../Footer';
+import Header from '../Header';
 import { Layout } from 'antd';
-import ProtectedRoute from '../../components/Router/ProtectedRoute';
+import ProtectedRoute from '../Router/ProtectedRoute';
 
 import { appRouters } from '../Router/router.config';
 import utils from '../../utils/utils';
@@ -46,7 +46,9 @@ class AppLayout extends React.Component<any> {
     const layout = (
       <Layout style={{ minHeight: '100vh' }}>
 
-        {console.log(path)}
+        {console.log(path.length)}
+
+
         {path === "/dashboard" ? < SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /> : <div></div>}
 
         <Layout>

@@ -1,11 +1,11 @@
-import LoadableComponent from './../Loadable/index';
+import LoadableComponent from '../Loadable/index';
 
 export const userRouter: any = [
   {
     path: '/user',
     name: 'user',
     title: 'User',
-    component: LoadableComponent(() => import('../../components/Layout/UserLayout')),
+    component: LoadableComponent(() => import('../Layout/UserLayout')),
     isLayout: true,
     showInMenu: false,
   },
@@ -26,7 +26,7 @@ export const appRouters: any = [
     permission: '',
     title: 'Home',
     icon: 'home',
-    component: LoadableComponent(() => import('../../components/Layout/AppLayout')),
+    component: LoadableComponent(() => import('../Layout/AppLayout')),
     isLayout: true,
     showInMenu: false,
   },
@@ -82,7 +82,7 @@ export const appRouters: any = [
     name: 'logout',
     icon: 'info-circle',
     showInMenu: false,
-    component: LoadableComponent(() => import('../../components/Logout')),
+    component: LoadableComponent(() => import('../Logout')),
   },
   {
     path: '/exception?:type',

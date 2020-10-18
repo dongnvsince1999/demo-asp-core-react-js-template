@@ -5690,3 +5690,601 @@ INFO  2020-10-15 13:54:13,164 [110  ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2020-10-15 13:54:13,164 [110  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 8.7833ms
 INFO  2020-10-15 13:54:13,164 [110  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
 INFO  2020-10-15 13:54:13,164 [110  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 14.9638ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:07,498 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:07,499 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:07,499 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.6635ms 204 
+INFO  2020-10-15 13:57:07,512 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:07,512 [82   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:07,512 [82   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:07,525 [82   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 13:57:07,590 [82   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:07,591 [82   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 65.5343ms
+INFO  2020-10-15 13:57:07,591 [82   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:07,591 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 79.4595ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:08,087 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:08,088 [82   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:08,088 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1.2234ms 204 
+INFO  2020-10-15 13:57:08,094 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:08,094 [82   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:08,095 [82   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:08,106 [82   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 13:57:08,110 [82   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:08,111 [82   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 4.9193ms
+INFO  2020-10-15 13:57:08,111 [82   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:08,111 [82   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.82ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:14,162 [74   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:14,162 [74   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:14,162 [74   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3573ms 204 
+INFO  2020-10-15 13:57:14,179 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:14,179 [77   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:14,180 [77   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:14,188 [77   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 13:57:14,229 [77   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:14,230 [77   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 42.2516ms
+INFO  2020-10-15 13:57:14,230 [77   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:14,230 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 51.1543ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:14,815 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:14,815 [77   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:14,815 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3571ms 204 
+INFO  2020-10-15 13:57:14,824 [110  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:14,824 [110  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:14,824 [110  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:14,829 [110  ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 13:57:14,833 [110  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:14,833 [110  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 4.2895ms
+INFO  2020-10-15 13:57:14,833 [110  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:14,834 [110  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 9.7094ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:17,489 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2020-10-15 13:57:17,489 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:17,489 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3584ms 204 
+INFO  2020-10-15 13:57:17,493 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=utf-8 54
+INFO  2020-10-15 13:57:17,494 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:17,494 [72   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Controllers.TokenAuthController.Authenticate (SE347.L11_DemoApp.Web.Core)'
+INFO  2020-10-15 13:57:17,511 [72   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Models.TokenAuth.AuthenticateResultModel] Authenticate(SE347.L11_DemoApp.Models.TokenAuth.AuthenticateModel) on controller SE347.L11_DemoApp.Controllers.TokenAuthController (SE347.L11_DemoApp.Web.Core).
+INFO  2020-10-15 13:57:17,594 [77   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:17,595 [77   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Controllers.TokenAuthController.Authenticate (SE347.L11_DemoApp.Web.Core) in 83.5512ms
+INFO  2020-10-15 13:57:17,595 [77   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Controllers.TokenAuthController.Authenticate (SE347.L11_DemoApp.Web.Core)'
+INFO  2020-10-15 13:57:17,595 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 101.4959ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:18,224 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:18,224 [77   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:18,224 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.4978ms 204 
+INFO  2020-10-15 13:57:18,227 [75   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 13:57:18,227 [75   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:18,227 [75   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 13:57:18,228 [75   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:18,232 [75   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 13:57:18,259 [75   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:18,259 [75   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 26.8351ms
+INFO  2020-10-15 13:57:18,259 [75   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 13:57:18,259 [75   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 32.6576ms 200 application/json; charset=utf-8
+INFO  2020-10-15 13:57:18,945 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:18,945 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:18,945 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3238ms 204 
+INFO  2020-10-15 13:57:18,950 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 13:57:18,950 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 13:57:18,952 [72   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 13:57:18,952 [72   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:18,958 [72   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 13:57:18,980 [72   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 13:57:18,980 [72   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 21.2161ms
+INFO  2020-10-15 13:57:18,980 [72   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 13:57:18,980 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 29.8328ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:17,347 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:17,347 [108  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:17,347 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3608ms 204 
+INFO  2020-10-15 14:02:17,368 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:17,368 [108  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:17,370 [108  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:17,371 [108  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:17,382 [108  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:02:17,573 [108  ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:17,573 [108  ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 190.8725ms
+INFO  2020-10-15 14:02:17,573 [108  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:17,573 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 205.4601ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:18,752 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:18,752 [111  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:18,752 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1.4714ms 204 
+INFO  2020-10-15 14:02:18,756 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:18,756 [108  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:18,756 [108  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:18,756 [108  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:18,762 [108  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:02:18,827 [108  ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:18,827 [108  ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 65.6647ms
+INFO  2020-10-15 14:02:18,827 [108  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:18,828 [108  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 72.0338ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:19,040 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:02:19,040 [111  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:19,040 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3533ms 204 
+INFO  2020-10-15 14:02:19,043 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:02:19,043 [111  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:19,044 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:19,044 [111  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:19,048 [111  ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:02:19,060 [111  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:19,060 [111  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 12.154ms
+INFO  2020-10-15 14:02:19,060 [111  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:19,060 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 17.3136ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:21,480 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:21,480 [111  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:21,480 [111  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:21,481 [111  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:21,494 [111  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:02:21,515 [105  ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:21,516 [105  ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 21.6974ms
+INFO  2020-10-15 14:02:21,516 [105  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:21,516 [105  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 36.6789ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:21,800 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:02:21,800 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:21,800 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:21,800 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:21,811 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:02:21,817 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:21,817 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 6.7104ms
+INFO  2020-10-15 14:02:21,817 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:21,818 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 17.8814ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:24,375 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:24,376 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:24,376 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.6847ms 204 
+INFO  2020-10-15 14:02:24,430 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:02:24,430 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:24,430 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:24,430 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:24,436 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:02:24,467 [22   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:24,468 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 31.4682ms
+INFO  2020-10-15 14:02:24,468 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:02:24,468 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 38.5886ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:02:25,356 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:02:25,356 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:25,356 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.344ms 204 
+INFO  2020-10-15 14:02:25,360 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:02:25,361 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:02:25,361 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:02:25,361 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:25,380 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:02:25,386 [111  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:02:25,386 [111  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 6.3545ms
+INFO  2020-10-15 14:02:25,386 [111  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:02:25,386 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 26.0758ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:06:42,735 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:06:42,736 [86   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:06:42,736 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.6317ms 204 
+INFO  2020-10-15 14:06:42,753 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:06:42,754 [15   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:06:42,754 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:06:42,754 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:06:42,766 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:06:42,822 [86   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:06:42,823 [86   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 57.2701ms
+INFO  2020-10-15 14:06:42,823 [86   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:06:42,823 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 70.6575ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:06:43,353 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:06:43,354 [86   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:06:43,354 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3271ms 204 
+INFO  2020-10-15 14:06:43,359 [86   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:06:43,360 [86   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:06:43,360 [86   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:06:43,361 [86   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:06:43,366 [86   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:06:43,382 [87   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:06:43,382 [87   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 15.7861ms
+INFO  2020-10-15 14:06:43,382 [87   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:06:43,382 [87   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 23.244ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:07:15,785 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:07:15,785 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:07:15,785 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3187ms 204 
+INFO  2020-10-15 14:07:15,788 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:07:15,788 [103  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:07:15,789 [103  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:07:15,790 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:07:15,807 [103  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:07:15,829 [103  ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:07:15,830 [103  ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 22.8456ms
+INFO  2020-10-15 14:07:15,830 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:07:15,830 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 42.7678ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:07:16,197 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:07:16,198 [103  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:07:16,198 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3968ms 204 
+INFO  2020-10-15 14:07:16,201 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:07:16,201 [34   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:07:16,202 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:07:16,202 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:07:16,210 [34   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:07:16,230 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:07:16,230 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 20.0239ms
+INFO  2020-10-15 14:07:16,230 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:07:16,230 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 29.4309ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:33,578 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:08:33,578 [34   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:33,578 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.4323ms 204 
+INFO  2020-10-15 14:08:33,582 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:08:33,582 [34   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:33,583 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:33,583 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:33,593 [34   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:08:33,658 [34   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:33,659 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 65.7532ms
+INFO  2020-10-15 14:08:33,659 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:33,660 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 77.5627ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:34,427 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:08:34,427 [34   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:34,427 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3265ms 204 
+INFO  2020-10-15 14:08:34,431 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:08:34,431 [34   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:34,431 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:34,432 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:34,443 [34   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:08:34,455 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:34,456 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 12.7068ms
+INFO  2020-10-15 14:08:34,456 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:34,456 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.1024ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:37,247 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:08:37,247 [104  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:37,247 [104  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:37,248 [104  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:37,256 [104  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:08:37,272 [34   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:37,272 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 16.1998ms
+INFO  2020-10-15 14:08:37,272 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:37,272 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.6841ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:37,565 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:08:37,565 [104  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:37,566 [104  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:37,566 [104  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:37,574 [104  ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:08:37,582 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:37,582 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 8.2443ms
+INFO  2020-10-15 14:08:37,582 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:37,582 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 17.2517ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:56,945 [99   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:08:56,945 [99   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:56,946 [99   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3967ms 204 
+INFO  2020-10-15 14:08:56,976 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:08:56,976 [79   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:56,978 [79   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:57,011 [79   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:57,056 [79   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:08:57,212 [79   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:57,213 [79   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 156.2341ms
+INFO  2020-10-15 14:08:57,213 [79   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:08:57,213 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 236.7618ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:08:58,055 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:08:58,056 [79   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:58,056 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.421ms 204 
+INFO  2020-10-15 14:08:58,064 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:08:58,064 [79   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:08:58,064 [79   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:08:58,064 [79   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:58,074 [79   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:08:58,080 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:08:58,080 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 6.1262ms
+INFO  2020-10-15 14:08:58,080 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:08:58,080 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.7309ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:09:27,156 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:09:27,157 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:09:27,157 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3766ms 204 
+INFO  2020-10-15 14:09:27,162 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:09:27,162 [103  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:09:27,162 [103  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:09:27,162 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:09:27,172 [103  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:09:27,234 [103  ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:09:27,234 [103  ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 61.8767ms
+INFO  2020-10-15 14:09:27,235 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:09:27,235 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 73.3817ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:09:27,663 [84   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:09:27,663 [84   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:09:27,663 [84   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3135ms 204 
+INFO  2020-10-15 14:09:27,677 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:09:27,678 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:09:27,679 [90   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:09:27,679 [90   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:09:27,686 [90   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:09:27,756 [103  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:09:27,756 [103  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 70.4982ms
+INFO  2020-10-15 14:09:27,756 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:09:27,756 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 78.8982ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:13:36,355 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:13:36,355 [70   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:13:36,356 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5991ms 204 
+INFO  2020-10-15 14:13:36,400 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:13:36,401 [78   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:13:36,401 [78   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:13:36,548 [70   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:13:36,555 [70   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:13:36,671 [34   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:13:36,671 [34   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 115.7865ms
+INFO  2020-10-15 14:13:36,671 [34   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:13:36,672 [34   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 271.1326ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:13:37,079 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:13:37,079 [70   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:13:37,079 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3743ms 204 
+INFO  2020-10-15 14:13:37,083 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:13:37,084 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:13:37,085 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:13:37,085 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:13:37,095 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:13:37,110 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:13:37,110 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 14.6793ms
+INFO  2020-10-15 14:13:37,110 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:13:37,110 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 26.7749ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:18:49,422 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:18:49,422 [85   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:18:49,422 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.6829ms 204 
+INFO  2020-10-15 14:18:49,426 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:18:49,426 [85   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:18:49,427 [85   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:18:49,428 [85   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:18:49,442 [85   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:18:49,484 [85   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:18:49,485 [85   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 43.137ms
+INFO  2020-10-15 14:18:49,485 [85   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:18:49,485 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 59.3779ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:18:49,588 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:18:49,589 [79   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:18:49,589 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.6445ms 204 
+INFO  2020-10-15 14:18:49,591 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:18:49,592 [85   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:18:49,594 [85   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:18:49,594 [85   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:18:49,611 [85   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:18:49,626 [78   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:18:49,626 [78   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 14.9203ms
+INFO  2020-10-15 14:18:49,626 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:18:49,626 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 34.7381ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:23:02,020 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:23:02,020 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:23:02,020 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5779ms 204 
+INFO  2020-10-15 14:23:02,028 [88   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:23:02,029 [88   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:23:02,030 [88   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:23:02,031 [88   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:23:02,041 [88   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:23:02,084 [88   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:23:02,085 [88   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 43.5337ms
+INFO  2020-10-15 14:23:02,085 [88   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:23:02,085 [88   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 57.7118ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:23:02,202 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:23:02,203 [85   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:23:02,203 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1.1305ms 204 
+INFO  2020-10-15 14:23:02,208 [85   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:23:02,209 [85   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:23:02,210 [85   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:23:02,210 [85   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:23:02,225 [85   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:23:02,252 [88   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:23:02,252 [88   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 26.7168ms
+INFO  2020-10-15 14:23:02,252 [88   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:23:02,252 [88   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 43.7074ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:25:18,320 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:25:18,320 [70   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:25:18,320 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5119ms 204 
+INFO  2020-10-15 14:25:18,323 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 14:25:18,323 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:25:18,324 [90   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:25:18,324 [90   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:25:18,350 [90   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 14:25:18,387 [90   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:25:18,388 [90   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 37.9914ms
+INFO  2020-10-15 14:25:18,388 [90   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 14:25:18,388 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 65.3148ms 200 application/json; charset=utf-8
+INFO  2020-10-15 14:25:18,503 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:25:18,503 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:25:18,503 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.4981ms 204 
+INFO  2020-10-15 14:25:18,505 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 14:25:18,506 [103  ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 14:25:18,507 [103  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 14:25:18,510 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:25:18,525 [103  ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 14:25:18,545 [103  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 14:25:18,545 [103  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 19.589ms
+INFO  2020-10-15 14:25:18,545 [103  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 14:25:18,546 [103  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 40.4389ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:00:43,851 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-10-15 15:00:43,868 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Web.Host.Controllers.HomeController.Index (SE347.L11_DemoApp.Web.Host)'
+INFO  2020-10-15 15:00:43,884 [78   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SE347.L11_DemoApp.Web.Host.Controllers.HomeController (SE347.L11_DemoApp.Web.Host).
+INFO  2020-10-15 15:00:45,099 [78   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-10-15 15:00:45,100 [78   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Web.Host.Controllers.HomeController.Index (SE347.L11_DemoApp.Web.Host) in 1215.5733ms
+INFO  2020-10-15 15:00:45,100 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Web.Host.Controllers.HomeController.Index (SE347.L11_DemoApp.Web.Host)'
+INFO  2020-10-15 15:00:45,100 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1249.1255ms 302 
+INFO  2020-10-15 15:00:45,118 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2020-10-15 15:00:45,142 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-10-15 15:00:45,195 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 77.3171ms 0 
+INFO  2020-10-15 15:00:45,265 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 123.6551ms 200 text/html;charset=utf-8
+INFO  2020-10-15 15:00:45,446 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-10-15 15:00:45,456 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-10-15 15:00:45,456 [76   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2020-10-15 15:00:45,473 [76   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2020-10-15 15:00:45,473 [76   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.8495ms 200 text/css
+INFO  2020-10-15 15:00:45,504 [104  ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'E:\_Folders\Github\CloneRepo\demo-asp-core-react-js-template\aspnet-core\src\SE347.L11_DemoApp.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2020-10-15 15:00:45,504 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 48.225ms 200 application/javascript
+INFO  2020-10-15 15:00:45,504 [33   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'E:\_Folders\Github\CloneRepo\demo-asp-core-react-js-template\aspnet-core\src\SE347.L11_DemoApp.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2020-10-15 15:00:45,504 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 58.4338ms 200 application/javascript
+INFO  2020-10-15 15:00:45,764 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-16x16.png  
+INFO  2020-10-15 15:00:45,772 [104  ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HM3GORE8QTEN", Request id "0HM3GORE8QTEN:00000002": the application aborted the connection.
+INFO  2020-10-15 15:00:45,774 [104  ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2020-10-15 15:00:45,774 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 9.5792ms 0 image/png
+INFO  2020-10-15 15:00:45,775 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-10-15 15:00:45,776 [104  ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:00:45,789 [104  ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Web.Host.Controllers.AntiForgeryController.SetCookie (SE347.L11_DemoApp.Web.Host)'
+INFO  2020-10-15 15:00:45,802 [104  ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller SE347.L11_DemoApp.Web.Host.Controllers.AntiForgeryController (SE347.L11_DemoApp.Web.Host).
+INFO  2020-10-15 15:00:45,825 [104  ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:00:45,825 [104  ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Web.Host.Controllers.AntiForgeryController.SetCookie (SE347.L11_DemoApp.Web.Host) in 22.8857ms
+INFO  2020-10-15 15:00:45,825 [104  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Web.Host.Controllers.AntiForgeryController.SetCookie (SE347.L11_DemoApp.Web.Host)'
+INFO  2020-10-15 15:00:45,826 [104  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 50.2829ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:00:45,880 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-10-15 15:00:45,881 [33   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:00:46,284 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 403.6246ms 200 application/json;charset=utf-8
+INFO  2020-10-15 15:18:29,522 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:18:29,523 [33   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:29,523 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.61ms 204 
+INFO  2020-10-15 15:18:29,525 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:18:29,525 [33   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:29,526 [33   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:18:29,526 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:18:29,538 [33   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 15:18:29,711 [93   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:18:29,712 [93   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 173.1139ms
+INFO  2020-10-15 15:18:29,712 [93   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:18:29,713 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 188.0583ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:18:30,044 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:18:30,044 [93   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:30,044 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5393ms 204 
+INFO  2020-10-15 15:18:30,046 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:18:30,047 [93   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:30,048 [93   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:18:30,048 [93   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:18:30,059 [93   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 15:18:30,071 [93   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:18:30,071 [93   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 12.5552ms
+INFO  2020-10-15 15:18:30,071 [93   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:18:30,072 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.1848ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:18:35,149 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:18:35,149 [93   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:35,149 [93   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3605ms 204 
+INFO  2020-10-15 15:18:35,151 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:18:35,151 [78   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:35,152 [78   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:18:35,152 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:18:35,164 [78   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 15:18:35,197 [78   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:18:35,198 [78   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 33.8019ms
+INFO  2020-10-15 15:18:35,198 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:18:35,198 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 47.1981ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:18:35,354 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:18:35,355 [78   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:35,355 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5028ms 204 
+INFO  2020-10-15 15:18:35,357 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:18:35,357 [78   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:18:35,358 [78   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:18:35,358 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:18:35,367 [78   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 15:18:35,402 [78   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:18:35,402 [78   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 34.4667ms
+INFO  2020-10-15 15:18:35,402 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:18:35,402 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 45.0052ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:20:54,423 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:20:54,423 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:20:54,423 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5015ms 204 
+INFO  2020-10-15 15:20:54,425 [90   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:20:54,425 [90   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:20:54,426 [90   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:20:54,441 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:20:54,454 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 15:20:54,495 [22   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:20:54,496 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 42.3624ms
+INFO  2020-10-15 15:20:54,496 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:20:54,496 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 71.3695ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:20:54,754 [84   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:20:54,754 [84   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:20:54,754 [84   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5968ms 204 
+INFO  2020-10-15 15:20:54,756 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:20:54,756 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:20:54,758 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:20:54,758 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:20:54,768 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 15:20:54,795 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:20:54,795 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 26.5384ms
+INFO  2020-10-15 15:20:54,795 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:20:54,795 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 38.9037ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:21:07,701 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:21:07,701 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:21:07,701 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.3619ms 204 
+INFO  2020-10-15 15:21:07,703 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-15 15:21:07,703 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:21:07,704 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:21:07,704 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:21:07,723 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-15 15:21:07,762 [22   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:21:07,763 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 39.8206ms
+INFO  2020-10-15 15:21:07,763 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-15 15:21:07,763 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 60.4031ms 200 application/json; charset=utf-8
+INFO  2020-10-15 15:21:07,918 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:21:07,919 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:21:07,919 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 0.5742ms 204 
+INFO  2020-10-15 15:21:07,921 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-15 15:21:07,922 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-15 15:21:07,923 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-10-15 15:21:07,923 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:21:07,938 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-15 15:21:07,954 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-15 15:21:07,954 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 15.8711ms
+INFO  2020-10-15 15:21:07,954 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-15 15:21:07,954 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 32.8553ms 200 application/json; charset=utf-8
+DEBUG 2020-10-15 16:04:37,545 [82   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-10-15 16:04:37,549 [82   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-10-15 16:04:37,550 [82   ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SE347.L11_DemoApp.MultiTenancy.Tenant, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SE347.L11_DemoApp.Authorization.Users.User, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-10-15 16:04:37,552 [82   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-10-15 16:04:37,552 [82   ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SE347.L11_DemoApp.MultiTenancy.Tenant, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SE347.L11_DemoApp.Authorization.Users.User, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-10-15 16:04:37,552 [82   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2020-10-16 13:24:20,988 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-10-16 13:24:21,291 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-10-16 13:24:21,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SE347.L11_DemoApp.Web.Host.Startup.L11_DemoAppWebHostModule, SE347.L11_DemoApp.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SE347.L11_DemoApp.L11_DemoAppWebCoreModule, SE347.L11_DemoApp.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SE347.L11_DemoApp.L11_DemoAppApplicationModule, SE347.L11_DemoApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,322 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SE347.L11_DemoApp.L11_DemoAppCoreModule, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,322 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,323 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,323 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,324 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,325 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SE347.L11_DemoApp.EntityFrameworkCore.L11_DemoAppEntityFrameworkModule, SE347.L11_DemoApp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,325 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,325 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,326 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,326 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,326 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,327 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:21,330 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-10-16 13:24:21,559 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-10-16 13:24:21,559 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-10-16 13:24:21,559 [1    ] o.Configuration.LanguageManagementConfig - Converted L11_DemoApp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-10-16 13:24:21,559 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-10-16 13:24:22,107 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SE347.L11_DemoApp.EntityFrameworkCore.L11_DemoAppDbContext, SE347.L11_DemoApp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-10-16 13:24:22,707 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-10-16 13:24:22,761 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-10-16 13:24:22,780 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-10-16 13:24:22,787 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: L11_DemoApp
+DEBUG 2020-10-16 13:24:22,793 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-10-16 13:24:22,862 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-10-16 13:24:22,897 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SE347.L11_DemoApp.MultiTenancy.Tenant, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SE347.L11_DemoApp.Authorization.Users.User, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-10-16 13:24:22,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-10-16 13:24:22,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-10-16 13:24:22,958 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Users.Dto.CreateUserDto
+DEBUG 2020-10-16 13:24:22,959 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Users.Dto.UserDto
+DEBUG 2020-10-16 13:24:22,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-10-16 13:24:22,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-10-16 13:24:22,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.Roles.Dto.PermissionDto
+DEBUG 2020-10-16 13:24:22,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-10-16 13:24:22,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SE347.L11_DemoApp.MultiTenancy.Dto.TenantDto
+INFO  2020-10-16 13:24:27,472 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-10-16 13:24:28,002 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\17520\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+WARN  2020-10-16 13:24:28,066 [1    ] Microsoft.AspNetCore.Server.Kestrel      - Overriding address(es) 'http://localhost:21021/'. Binding to endpoints defined in UseKestrel() instead.
+INFO  2020-10-16 13:34:39,685 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-16 13:34:39,718 [23   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-16 13:34:39,732 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 48.5116ms 204 
+INFO  2020-10-16 13:34:39,752 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-10-16 13:34:39,753 [23   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-16 13:34:40,175 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-16 13:34:41,928 [23   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-10-16 13:34:42,685 [21   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-16 13:34:42,938 [21   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 1003.7451ms
+INFO  2020-10-16 13:34:42,939 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-10-16 13:34:42,946 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3193.5034ms 200 application/json; charset=utf-8
+INFO  2020-10-16 13:34:43,047 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-16 13:34:43,047 [23   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-16 13:34:43,048 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1.3519ms 204 
+INFO  2020-10-16 13:34:43,050 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-10-16 13:34:43,050 [23   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-10-16 13:34:43,056 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-16 13:34:43,072 [23   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[SE347.L11_DemoApp.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller SE347.L11_DemoApp.Sessions.SessionAppService (SE347.L11_DemoApp.Application).
+INFO  2020-10-16 13:34:43,471 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-10-16 13:34:43,506 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application) in 433.7805ms
+INFO  2020-10-16 13:34:43,506 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SE347.L11_DemoApp.Sessions.SessionAppService.GetCurrentLoginInformations (SE347.L11_DemoApp.Application)'
+INFO  2020-10-16 13:34:43,506 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 455.9061ms 200 application/json; charset=utf-8
+DEBUG 2020-10-16 14:41:35,226 [74   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-10-16 14:41:35,228 [74   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-10-16 14:41:35,228 [74   ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SE347.L11_DemoApp.MultiTenancy.Tenant, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SE347.L11_DemoApp.Authorization.Users.User, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-10-16 14:41:35,230 [74   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-10-16 14:41:35,230 [74   ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SE347.L11_DemoApp.MultiTenancy.Tenant, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SE347.L11_DemoApp.Authorization.Users.User, SE347.L11_DemoApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-10-16 14:41:35,230 [74   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

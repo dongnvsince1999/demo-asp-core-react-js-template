@@ -16,6 +16,8 @@ const Router = () => {
       <Route path="/user/login" exact render={(props: any) => <UserLayout {...props} />} />
       <Route path="/logout" exact render={(props: any) => <Logout {...props} />} />
       <ProtectedRoute path="/dashboard" exact render={(props: any) => <AppLayout {...props} />} />
+      {/* <ProtectedRoute path="/quan-ly-cv" exact render={(props: any) => <AppLayout {...props} />} /> */}
+      
       <Route path="/" exact render={(props: any) => <AppLayout {...props} />} />
     </Switch>
   );
