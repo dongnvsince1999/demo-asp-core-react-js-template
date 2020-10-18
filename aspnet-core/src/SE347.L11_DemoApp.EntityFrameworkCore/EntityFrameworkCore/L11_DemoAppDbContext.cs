@@ -3,6 +3,7 @@ using Abp.Zero.EntityFrameworkCore;
 using SE347.L11_DemoApp.Authorization.Roles;
 using SE347.L11_DemoApp.Authorization.Users;
 using SE347.L11_DemoApp.MultiTenancy;
+using SE347.L11_DemoApp.Entities;
 
 namespace SE347.L11_DemoApp.EntityFrameworkCore
 {
@@ -10,9 +11,12 @@ namespace SE347.L11_DemoApp.EntityFrameworkCore
     {
         /* Define a DbSet for each entity of the application */
         
+        public DbSet<JobType> JobTypes { get; set; }
+
         public L11_DemoAppDbContext(DbContextOptions<L11_DemoAppDbContext> options)
             : base(options)
         {
         }
+
     }
 }

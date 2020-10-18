@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SE347.L11_DemoApp.EntityFrameworkCore;
 
 namespace SE347.L11_DemoApp.Migrations
 {
     [DbContext(typeof(L11_DemoAppDbContext))]
-    partial class L11_DemoAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201018012248_AddJobTypeEntity")]
+    partial class AddJobTypeEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
