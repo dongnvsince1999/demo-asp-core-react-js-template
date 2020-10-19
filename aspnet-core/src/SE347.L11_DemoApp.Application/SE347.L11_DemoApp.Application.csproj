@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <VersionPrefix>1.0.0.0</VersionPrefix>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -14,6 +14,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\group0\Group0.SE347.L11_DemoApp.Application\Group0.SE347.L11_DemoApp.Application.csproj" />
     <ProjectReference Include="..\SE347.L11_DemoApp.Core\SE347.L11_DemoApp.Core.csproj" />
   </ItemGroup>
 </Project>

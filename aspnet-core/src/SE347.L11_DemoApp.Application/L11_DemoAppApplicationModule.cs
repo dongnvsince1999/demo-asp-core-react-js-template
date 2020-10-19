@@ -1,13 +1,15 @@
 ﻿using Abp.AutoMapper;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
+using Group0.SE347.L11_DemoApp.Application;
 using SE347.L11_DemoApp.Authorization;
 
 namespace SE347.L11_DemoApp
 {
     [DependsOn(
         typeof(L11_DemoAppCoreModule), 
-        typeof(AbpAutoMapperModule))]
+        typeof(AbpAutoMapperModule),
+        typeof(Group0ApplicationModule))]
     public class L11_DemoAppApplicationModule : AbpModule
     {
         public override void PreInitialize()

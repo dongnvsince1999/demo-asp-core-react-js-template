@@ -13,14 +13,16 @@ using SE347.L11_DemoApp.Authentication.JwtBearer;
 using SE347.L11_DemoApp.Configuration;
 using SE347.L11_DemoApp.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Group0.SE347.L11_DemoApp.Web.Core;
 
 namespace SE347.L11_DemoApp
 {
     [DependsOn(
-         typeof(L11_DemoAppApplicationModule),
-         typeof(L11_DemoAppEntityFrameworkModule),
-         typeof(AbpAspNetCoreModule)
-        ,typeof(AbpAspNetCoreSignalRModule)
+        typeof(L11_DemoAppApplicationModule),
+        typeof(L11_DemoAppEntityFrameworkModule),
+        typeof(AbpAspNetCoreModule),
+        typeof(AbpAspNetCoreSignalRModule),
+        typeof(Group0WebCoreModule)
      )]
     public class L11_DemoAppWebCoreModule : AbpModule
     {

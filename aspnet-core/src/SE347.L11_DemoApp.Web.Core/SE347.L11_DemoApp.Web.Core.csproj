@@ -18,6 +18,7 @@
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\group0\Group0.SE347.L11_DemoApp.Web.Core\Group0.SE347.L11_DemoApp.Web.Core.csproj" />
     <ProjectReference Include="..\SE347.L11_DemoApp.Application\SE347.L11_DemoApp.Application.csproj" />
     <ProjectReference Include="..\SE347.L11_DemoApp.EntityFrameworkCore\SE347.L11_DemoApp.EntityFrameworkCore.csproj" />
   </ItemGroup>

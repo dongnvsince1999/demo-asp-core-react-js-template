@@ -18,6 +18,12 @@ namespace SE347.L11_DemoApp.Authorization
             jobType.CreateChildPermission(PermissionNames.Pages_JobType_Update, L("UpdateJobType"));
             jobType.CreateChildPermission(PermissionNames.Pages_JobType_Get, L("GetJobType"));
             jobType.CreateChildPermission(PermissionNames.Pages_JobType_Delete, L("DeleteJobType"));
+
+            // Demo
+            var demo = context.CreatePermission(PermissionNames.Pages_Group0_Demos, L("Demo"));
+            demo.CreateChildPermission(PermissionNames.Pages_Group0_Demos_Create, L("CreateDemo"));
+            demo.CreateChildPermission(PermissionNames.Pages_Group0_Demos_Update, L("UpdateDemo"));
+            demo.CreateChildPermission(PermissionNames.Pages_Group0_Demos_Delete, L("DeleteDemo"));
         }
 
         private static ILocalizableString L(string name)
