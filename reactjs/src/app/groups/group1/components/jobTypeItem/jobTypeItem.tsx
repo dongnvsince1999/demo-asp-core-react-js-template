@@ -3,11 +3,11 @@ import { jobTypeDTO } from '../../dto/jobTypeDTO'
 // import { ClickAwayListener } from '@material-ui/core';
 // import CustomModal from 'app/shared/components/Modal/CustomModal'
 
-interface IJobTypeItemProps {
+interface IJobTypeItemProps { //props
     jobTypeDTO: jobTypeDTO;
 }
 
-interface IJobTypeItemState {
+interface IJobTypeItemState { //state
     //for logic popup
     isAddDocCategoryPopupOpen: Boolean;
     isEditDocCategoryPopupOpen: Boolean;

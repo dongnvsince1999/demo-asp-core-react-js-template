@@ -12,7 +12,7 @@ export const userRouter: any = [
     showInMenu: false,
   },
   {
-    path: '/user/login',
+    path: '/login',
     name: 'login',
     title: 'LogIn',
     component: LoadableComponent(() => import('app/shared/scenes/Login')),
@@ -20,7 +20,26 @@ export const userRouter: any = [
   },
 ];
 
-export const appRouters: any = [
+export const navRouters: any = [
+  {
+    path: '/job-type',
+    name: 'jobtype',
+    title: 'Loại công việc',
+    component: LoadableComponent(() => import('../Layout/AppLayout')),
+    isLayout: true,
+    showInMenu: true,
+  },
+  {
+    path: '/admin/job-type',
+    name: 'jobtype',
+    title: 'Quản lý loại công việc',
+    component: LoadableComponent(() => import('app/shared/scenes/Login')),
+    showInMenu: true,
+  },
+];
+
+//cho dashboard
+export const managementRouters: any = [
   {
     path: '/',
     exact: true,
@@ -28,30 +47,32 @@ export const appRouters: any = [
     permission: '',
     title: 'Home',
     icon: 'home',
-    component: LoadableComponent(() => import('../Layout/ManagementLayout')),
+    component: LoadableComponent(() => import('../Layout/AppLayout')),
     isLayout: true,
     showInMenu: false,
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
+    path: '/admin',
+    name: 'admin',
     permission: '',
     title: 'Dashboard',
     icon: 'home',
     showInMenu: true,
-    component: LoadableComponent(() => import('app/shared/scenes/Dashboard')),
+    component: LoadableComponent(() => import('../Layout/ManagementLayout')),
+    // component: LoadableComponent(() => import('app/shared/scenes/Dashboard'))
+
   },
   {
-    path: '/users',
+    path: '/admin/users',
     permission: 'Pages.Users',
     title: 'Users',
     name: 'user',
     icon: 'user',
     showInMenu: true,
-    component: LoadableComponent(() => import('app/shared/scenes/Users')),
+    component: LoadableComponent(() => import('app/shared/scenes/Users'))
   },
   {
-    path: '/roles',
+    path: '/admin/roles',
     permission: 'Pages.Roles',
     title: 'Roles',
     name: 'role',
@@ -60,7 +81,7 @@ export const appRouters: any = [
     component: LoadableComponent(() => import('app/shared/scenes/Roles')),
   },
   {
-    path: '/tenants',
+    path: '/admin/tenants',
     permission: 'Pages.Tenants',
     title: 'Tenants',
     name: 'tenant',
@@ -69,7 +90,7 @@ export const appRouters: any = [
     component: LoadableComponent(() => import('app/shared/scenes/Tenants')),
   },
   {
-    path: '/about',
+    path: '/admin/about',
     permission: '',
     title: 'About',
     name: 'about',
@@ -97,4 +118,4 @@ export const appRouters: any = [
   },
 ];
 
-export const routers = [...userRouter, ...appRouters];
+export const routers = [...userRouter, ...managementRouters, ...navRouters];

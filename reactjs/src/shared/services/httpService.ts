@@ -1,7 +1,7 @@
 import AppConsts from './../lib/appconst';
 import { L } from '../lib/abpUtility';
 import { Modal } from 'antd';
-import axios from 'axios'; 
+import axios from 'axios';
 
 const qs = require('qs');
 
@@ -28,11 +28,11 @@ http.interceptors.request.use(
     config.headers.common['Access-Control-Allow-Origin'] = "*";
     config.headers.common['crossdomain'] = true;
     console.log(config);
-return config;
+    return config;
   },
-function(error) {
-  return Promise.reject(error);
-}
+  function (error) {
+    return Promise.reject(error);
+  }
 );
 
 http.interceptors.response.use(

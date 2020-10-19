@@ -2,14 +2,6 @@
 import React from 'react';
 import { ClickAwayListener } from '@material-ui/core'
 import { jobTypeDTO } from '../../dto/jobTypeDTO'
-// import { jobTypeItem } from '../../components/jobTypeItem/jobTypeItem'
-
-// import AppLayout from 'components/Layout/AppLayout'
-// import ManagementLayout from 'components/Layout/ManagementLayout'
-
-//AppLayout: Page without header and Footer
-//AppLayout: Page with 100% width Header
-
 
 interface IListJobTypeProps {
     list_JobType: Array<jobTypeDTO>;

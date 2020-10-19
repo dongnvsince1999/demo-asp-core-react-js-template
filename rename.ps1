@@ -9,7 +9,7 @@ $newCompanyName="YourCompanyName"
 # project name placeholder
 $oldProjectName="L11_DemoApp"
 # your project name
-$newProjectName="YourProjectName"
+$newProjectName="SE347.L11_HelloWork
 
 # file type
 $fileType="FileInfo"

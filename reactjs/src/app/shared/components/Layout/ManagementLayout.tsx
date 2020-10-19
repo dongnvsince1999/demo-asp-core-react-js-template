@@ -11,7 +11,7 @@ import Header from '../Header';
 import { Layout } from 'antd';
 import ProtectedRoute from '../Router/ProtectedRoute';
 
-import { appRouters } from '../Router/router.config';
+import { managementRouters } from '../Router/router.config';
 import utils from 'shared/utils/utils';
 import SiderMenu from 'app/shared/components/SiderMenu';
 
@@ -45,36 +45,32 @@ class ManagementLayout extends React.Component<any> {
 
     const layout = (
       <Layout style={{ minHeight: '100vh' }}>
-
-        {console.log(path.length)}
-
-
-        {path === "/dashboard" ? < SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /> : <div></div>}
-
+        <div style={{ minHeight: '100vh', background: "#c4c4c4" }} >< SiderMenu path={path} onCollapse={this.onCollapse} history={history} collapsed={collapsed} /></div>
         <Layout>
           <Layout.Header style={{ background: '#fff', minHeight: 52, padding: 0 }}>
             <Header collapsed={this.state.collapsed} toggle={this.toggle} />
           </Layout.Header>
           <Content style={{ margin: 16 }}>
-            <Switch>
-              {appRouters
-                .filter((item: any) => !item.isLayout)
-                .map((route: any, index: any) => (
-                  <Route
-                    exact
-                    key={index}
-                    path={route.path}
-                    render={props => <ProtectedRoute component={route.component} permission={route.permission} />}
-                  />
-                ))}
-              {/* {pathname !== '/' && <NotFoundRoute />} */}
-            </Switch>
+            {window.location.pathname !== '/admin' &&
+              <Switch>
+                {managementRouters
+                  .filter((item: any) => !item.isLayout)
+                  .map((route: any, index: any) => (
+                    <Route
+                      exact
+                      key={index}
+                      path={route.path}
+                      render={props => <ProtectedRoute component={route.component} permission={route.permission} />}
+                    />
+                  ))}
+              </Switch>
+            }
           </Content>
           <Layout.Footer style={{ textAlign: 'center' }}>
             <Footer />
           </Layout.Footer>
         </Layout>
-      </Layout>
+      </Layout >
     );
 
     return <DocumentTitle title={utils.getPageTitle(pathname)}>{layout}</DocumentTitle>;
@@ -82,3 +78,6 @@ class ManagementLayout extends React.Component<any> {
 }
 
 export default ManagementLayout;
+
+
+{/* {pathname !== '/' && <NotFoundRoute /> */ }

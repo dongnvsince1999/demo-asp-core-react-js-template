@@ -18,6 +18,7 @@ export interface IHeaderProps {
 
 const userDropdownMenu = (
   <Menu>
+    {/* for logout logic */}
     <Menu.Item key="2">
       <Link to="/logout">
         <Icon type="logout" />
@@ -33,26 +34,37 @@ export class Header extends React.Component<IHeaderProps> {
     //code for menu item
 
     return (
-      // <div className={'header-container '} style = {{justifyContent: "space-between !important", width: "100%"}}>
-      <div className={'header-container'} >
+      <div className={'header-nav-container'} >
+
+        <div className = "header">
+
+        </div>
+
         <div style={{ display: "flex" }}>
-          {window.location.pathname === "/dashboard" ?
+          {window.location.pathname.substring(0, 5) === "/admin" ?
             <div style={{ textAlign: 'left' }} >
               <Icon className="trigger" type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={this.props.toggle} />
             </div> :
-            <div  >
-              <div style={{ width: "30px", height: "30px", background: "green" }}>Logo</div>
-            </div>}
 
+            <Link to="/">
+              <div style={{ width: "30px", height: "30px", background: "green" }} onClick={() => { }} >Logo</div>
+            </Link>
+          }
           <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Việc làm</div>
           <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Phỏng vấn</div>
           <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Công ty</div>
           <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Nhà tuyển dụng</div>
-          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >
-            <Link to="/dashboard">
-              Quản trị
+
+          <Link style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} to="/admin">
+            Quản trị
            </Link>
-          </div >
+          <Link style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} to="/job-type">
+            Demo
+           </Link>
+          <Link to="/admin/job-type">
+            Demo Admin
+           </Link>
+
         </div>
         <div style={{ padding: '0px 8px 0px 8px', textAlign: 'right' }} >
           <LanguageSelect /> {' '}
