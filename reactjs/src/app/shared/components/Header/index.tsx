@@ -4,11 +4,11 @@ import * as React from 'react';
 
 import { Avatar, Badge, Dropdown, Icon, Menu } from 'antd';
 
-import { L } from '../../lib/abpUtility';
+import { L } from 'shared/lib/abpUtility';
 import LanguageSelect from '../LanguageSelect';
 import { Link } from 'react-router-dom';
 
-import profilePicture from '../../images/user.png';
+import profilePicture from 'assets/images/user.png';
 // import Logout from 'components/Logout';
 
 export interface IHeaderProps {

@@ -3,12 +3,12 @@ import * as React from 'react';
 import { Button, Card, Col, Dropdown, Input, Menu, Modal, Row, Table, Tag } from 'antd';
 import { inject, observer } from 'mobx-react';
 
-import AppComponentBase from '../../components/AppComponentBase';
+import AppComponentBase from 'app/shared/components/AppComponentBase';
 import CreateOrUpdateUser from './components/createOrUpdateUser';
-import { EntityDto } from '../../services/dto/entityDto';
-import { L } from '../../lib/abpUtility';
-import Stores from '../../stores/storeIdentifier';
-import UserStore from '../../stores/userStore';
+import { EntityDto } from 'shared/services/dto/entityDto';
+import { L } from 'shared/lib/abpUtility';
+import Stores from 'shared/stores/storeIdentifier';
+import UserStore from 'shared/stores/userStore';
 
 export interface IUserProps {
   userStore: UserStore;

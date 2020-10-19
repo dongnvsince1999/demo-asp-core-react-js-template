@@ -1,8 +1,8 @@
 import { ChangeLanguagaInput } from './dto/changeLanguageInput';
 import { CreateOrUpdateUserInput } from './dto/createOrUpdateUserInput';
-import { EntityDto } from '../../services/dto/entityDto';
+import { EntityDto } from 'shared/services/dto/entityDto';
 import { GetAllUserOutput } from './dto/getAllUserOutput';
-import { PagedResultDto } from '../../services/dto/pagedResultDto';
+import { PagedResultDto } from 'shared/services/dto/pagedResultDto';
 import { PagedUserResultRequestDto } from "./dto/PagedUserResultRequestDto";
 import { UpdateUserInput } from './dto/updateUserInput';
 import http from '../httpService';

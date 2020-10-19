@@ -1,11 +1,13 @@
 import LoadableComponent from '../Loadable/index';
 
+//Maybe dashboard
+
 export const userRouter: any = [
   {
     path: '/user',
     name: 'user',
     title: 'User',
-    component: LoadableComponent(() => import('../Layout/UserLayout')),
+    component: LoadableComponent(() => import('../Layout/AppLayout')),
     isLayout: true,
     showInMenu: false,
   },
@@ -13,7 +15,7 @@ export const userRouter: any = [
     path: '/user/login',
     name: 'login',
     title: 'LogIn',
-    component: LoadableComponent(() => import('../../scenes/Login')),
+    component: LoadableComponent(() => import('app/shared/scenes/Login')),
     showInMenu: false,
   },
 ];
@@ -26,7 +28,7 @@ export const appRouters: any = [
     permission: '',
     title: 'Home',
     icon: 'home',
-    component: LoadableComponent(() => import('../Layout/AppLayout')),
+    component: LoadableComponent(() => import('../Layout/ManagementLayout')),
     isLayout: true,
     showInMenu: false,
   },
@@ -37,7 +39,7 @@ export const appRouters: any = [
     title: 'Dashboard',
     icon: 'home',
     showInMenu: true,
-    component: LoadableComponent(() => import('../../scenes/Dashboard')),
+    component: LoadableComponent(() => import('app/shared/scenes/Dashboard')),
   },
   {
     path: '/users',
@@ -46,7 +48,7 @@ export const appRouters: any = [
     name: 'user',
     icon: 'user',
     showInMenu: true,
-    component: LoadableComponent(() => import('../../scenes/Users')),
+    component: LoadableComponent(() => import('app/shared/scenes/Users')),
   },
   {
     path: '/roles',
@@ -55,7 +57,7 @@ export const appRouters: any = [
     name: 'role',
     icon: 'tags',
     showInMenu: true,
-    component: LoadableComponent(() => import('../../scenes/Roles')),
+    component: LoadableComponent(() => import('app/shared/scenes/Roles')),
   },
   {
     path: '/tenants',
@@ -64,7 +66,7 @@ export const appRouters: any = [
     name: 'tenant',
     icon: 'appstore',
     showInMenu: true,
-    component: LoadableComponent(() => import('../../scenes/Tenants')),
+    component: LoadableComponent(() => import('app/shared/scenes/Tenants')),
   },
   {
     path: '/about',
@@ -73,7 +75,7 @@ export const appRouters: any = [
     name: 'about',
     icon: 'info-circle',
     showInMenu: true,
-    component: LoadableComponent(() => import('../../scenes/About')),
+    component: LoadableComponent(() => import('app/shared/scenes/About')),
   },
   {
     path: '/logout',
@@ -91,7 +93,7 @@ export const appRouters: any = [
     name: 'exception',
     icon: 'info-circle',
     showInMenu: false,
-    component: LoadableComponent(() => import('../../scenes/Exception')),
+    component: LoadableComponent(() => import('app/shared/scenes/Exception')),
   },
 ];
 

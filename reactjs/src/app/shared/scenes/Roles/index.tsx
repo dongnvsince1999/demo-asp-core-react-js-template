@@ -3,13 +3,13 @@ import * as React from 'react';
 import { Button, Card, Col, Dropdown, Input, Menu, Modal, Row, Table } from 'antd';
 import { inject, observer } from 'mobx-react';
 
-import AppComponentBase from '../../components/AppComponentBase';
+import AppComponentBase from 'app/shared/components/AppComponentBase';
 import CreateOrUpdateRole from './components/createOrUpdateRole';
-import { EntityDto } from '../../services/dto/entityDto';
+import { EntityDto } from 'shared/services/dto/entityDto';
 import { FormComponentProps } from 'antd/lib/form';
-import { L } from '../../lib/abpUtility';
-import RoleStore from '../../stores/roleStore';
-import Stores from '../../stores/storeIdentifier';
+import { L } from 'shared/lib/abpUtility';
+import RoleStore from 'shared/stores/roleStore';
+import Stores from 'shared/stores/storeIdentifier';
 
 export interface IRoleProps extends FormComponentProps {
   roleStore: RoleStore;

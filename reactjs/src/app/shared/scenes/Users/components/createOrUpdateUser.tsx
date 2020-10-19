@@ -5,8 +5,8 @@ import { Checkbox, Form, Input, Modal, Tabs } from 'antd';
 import CheckboxGroup from 'antd/lib/checkbox/Group';
 import { FormComponentProps } from 'antd/lib/form';
 import FormItem from 'antd/lib/form/FormItem';
-import { GetRoles } from '../../../services/user/dto/getRolesOuput';
-import { L } from '../../../lib/abpUtility';
+import { GetRoles } from 'shared/services/user/dto/getRolesOuput';
+import { L } from 'shared/lib/abpUtility';
 import rules from './createOrUpdateUser.validation';
 
 const TabPane = Tabs.TabPane;

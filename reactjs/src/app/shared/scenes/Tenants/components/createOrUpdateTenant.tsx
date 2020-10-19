@@ -4,7 +4,7 @@ import { Checkbox, Col, Form, Input, Modal } from 'antd';
 
 import { FormComponentProps } from 'antd/lib/form';
 import FormItem from 'antd/lib/form/FormItem';
-import { L } from '../../../lib/abpUtility';
+import { L } from 'shared/lib/abpUtility';
 import rules from './createOrUpdateTenant.validation';
 
 export interface ICreateOrUpdateTenantProps extends FormComponentProps {

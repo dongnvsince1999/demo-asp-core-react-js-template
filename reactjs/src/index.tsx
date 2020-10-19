@@ -8,9 +8,9 @@ import "moment-timezone";
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'mobx-react';
-import Utils from './utils/utils';
-import abpUserConfigurationService from './services/abpUserConfigurationService';
-import initializeStores from './stores/storeInitializer';
+import Utils from 'shared/utils/utils';
+import abpUserConfigurationService from 'shared/services/abpUserConfigurationService';
+import initializeStores from 'shared/stores/storeInitializer';
 import registerServiceWorker from './registerServiceWorker';
 
 declare var abp: any;

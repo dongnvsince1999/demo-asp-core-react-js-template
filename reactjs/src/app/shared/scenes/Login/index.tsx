@@ -5,14 +5,14 @@ import * as React from 'react';
 import { Button, Card, Checkbox, Col, Form, Icon, Input, Modal, Row } from 'antd';
 import { inject, observer } from 'mobx-react';
 
-import AccountStore from '../../stores/accountStore';
-import AuthenticationStore from '../../stores/authenticationStore';
+import AccountStore from 'shared/stores/accountStore';
+import AuthenticationStore from 'shared/stores/authenticationStore';
 import { FormComponentProps } from 'antd/lib/form';
-import { L } from '../../lib/abpUtility';
+import { L } from 'shared/lib/abpUtility';
 import { Redirect } from 'react-router-dom';
-import SessionStore from '../../stores/sessionStore';
-import Stores from '../../stores/storeIdentifier';
-import TenantAvailabilityState from '../../services/account/dto/tenantAvailabilityState';
+import SessionStore from 'shared/stores/sessionStore';
+import Stores from 'shared/stores/storeIdentifier';
+import TenantAvailabilityState from 'shared/services/account/dto/tenantAvailabilityState';
 import rules from './index.validation';
 
 const FormItem = Form.Item;

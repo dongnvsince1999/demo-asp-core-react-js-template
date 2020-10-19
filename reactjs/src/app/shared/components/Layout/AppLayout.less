@@ -1,49 +1,71 @@
-.trigger {
-  font-size: 18px;
-  line-height: 64px;
-  padding: 0 24px;
-  cursor: pointer;
-  transition: color 0.3s;
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: @layout-body-background;
 }
 
-.trigger:hover {
-  color: #1890ff;
+.lang {
+  text-align: right;
+  width: 100%;
+  height: 40px;
+  line-height: 44px;
+  :global(.ant-dropdown-trigger) {
+    margin-right: 24px;
+  }
+}
+
+.content {
+  padding: 32px 0;
+  flex: 1;
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    background-image: url('/src/assets/images/appLayout-Backround.svg');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: 100%;
+  }
+
+  .content {
+    padding: 72px 0 24px 0;
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  height: 44px;
+  line-height: 44px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
+  height: 44px;
+  vertical-align: top;
+  margin-right: 16px;
 }
 
-/* Let's get this party started */
-::-webkit-scrollbar {
-  width: 12px;
+.title {
+  font-size: 33px;
+  color: @heading-color;
+  font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #455a64;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-  background: #455a64;
-}
-
-.sidebar {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 3px 10px 30px 3px rgba(0, 0, 0, 0.19);
-}
-
-.TableCardContainer {
-  margin: 25px 0px 0px 0px;
+.desc {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  margin-top: 12px;
+  margin-bottom: 40px;
 }

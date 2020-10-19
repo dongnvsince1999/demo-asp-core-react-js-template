@@ -32,7 +32,7 @@ module.exports = {
                 from: 'node_modules/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr-client.js',
               },
               {
-                from: 'src/lib/abp.js',
+                from: 'src/shared/lib/abp.js',
               },
             ])
           : new CopyWebpackPlugin([
@@ -44,7 +44,7 @@ module.exports = {
                 to:'dist/abp.signalr-client.js'
               },
               {
-                from: 'src/lib/abp.js',
+                from: 'src/shared/lib/abp.js',
               },
             ])
       );
