@@ -1,4 +1,17 @@
 import Group1NavbarRouter from 'app/groups/group1/router';
+import Group10NavbarRouter from 'app/groups/group10/router';
+import Group11NavbarRouter from 'app/groups/group11/router';
+import Group12NavbarRouter from 'app/groups/group12/router';
+import Group13NavbarRouter from 'app/groups/group13/router';
+import Group14NavbarRouter from 'app/groups/group14/router';
+import Group2NavbarRouter from 'app/groups/group2/router';
+import Group3NavbarRouter from 'app/groups/group3/router';
+import Group4NavbarRouter from 'app/groups/group4/router';
+import Group5NavbarRouter from 'app/groups/group5/router';
+import Group6NavbarRouter from 'app/groups/group6/router';
+import Group7NavbarRouter from 'app/groups/group7/router';
+import Group8NavbarRouter from 'app/groups/group8/router';
+import Group9NavbarRouter from 'app/groups/group9/router';
 import LoadableComponent from '../Loadable/index';
 // import 
 //Maybe dashboard
@@ -32,6 +45,19 @@ export const userRouter: any = [
 
 export const navRouters: Array<IRouter> =
   Group1NavbarRouter
+    .concat(Group2NavbarRouter)
+    .concat(Group3NavbarRouter)
+    .concat(Group4NavbarRouter)
+    .concat(Group5NavbarRouter)
+    .concat(Group6NavbarRouter)
+    .concat(Group7NavbarRouter)
+    .concat(Group8NavbarRouter)
+    .concat(Group9NavbarRouter)
+    .concat(Group10NavbarRouter)
+    .concat(Group11NavbarRouter)
+    .concat(Group12NavbarRouter)
+    .concat(Group13NavbarRouter)
+    .concat(Group14NavbarRouter)
 
 
 export const managementRouters: any = [
