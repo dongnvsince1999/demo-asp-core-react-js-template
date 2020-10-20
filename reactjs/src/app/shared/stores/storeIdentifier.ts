@@ -1,3 +1,4 @@
+
 export default class Stores {
   static AuthenticationStore: string = 'authenticationStore';
   static RoleStore: string = 'roleStore';
@@ -5,4 +6,5 @@ export default class Stores {
   static UserStore: string = 'userStore';
   static SessionStore: string = 'sessionStore';
   static AccountStore: string = 'accountStore';
+  static jobTypeStore: string = 'jobTypeStore';
 }

@@ -1,79 +1,239 @@
-// import { Route, Switch } from 'react-router-dom';
-import React from 'react';
+import React from 'react'
+
+import '../../styles.less'
+import './JobTypeList.less'
+import { inject, observer } from 'mobx-react';
 import { ClickAwayListener } from '@material-ui/core'
-import { jobTypeDTO } from '../../dto/jobTypeDTO'
+import CustomModal from 'app/shared/components/CustomModal/CustomModal'
+import AppComponentBase from 'app/shared/components/AppComponentBase';
+import Stores from 'app/shared/stores/storeIdentifier';
+import JobTypeStore from '../../stores/jobTypeStore';
+import { EntityDto } from 'shared/services/dto/entityDto';
+import { CreateOrUpdateJobTypeInput } from '../../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
 
-interface IListJobTypeProps {
-    list_JobType: Array<jobTypeDTO>;
+export interface IJobTypeListProps {
+    jobTypeStore: JobTypeStore;
 }
 
-interface IListJobTypeState {
-    //for logic popup
-    isAddDocCategoryPopupOpen: Boolean;
-    isEditDocCategoryPopupOpen: Boolean;
-    isVerifyDeleteDocCategoryPopupOpen: Boolean;
-
-    //for content of popup
-    isNotifySuccessOpen: Boolean;
-    isNotifyFailOpen: Boolean;
+export interface IJobTypeListState {
+    modalVisible: boolean;
+    selectedID: string;
+    isAnyItemClicked: boolean;
+    isAddJobTypePopupOpen: boolean;
+    jobTypeName: string,
+    jobTypeDesc: string
 }
 
-//component for page
-export default class jobTypeList extends React.Component<IListJobTypeProps, IListJobTypeState> {
 
-    constructor({ list_JobType }: IListJobTypeProps) {
-        super({ list_JobType });
+@inject(Stores.jobTypeStore)
+@observer
+export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJobTypeListState> {
+
+
+
+    constructor(props: any) {
+        super(props);
         this.state = {
-            isAddDocCategoryPopupOpen: false,
-            isEditDocCategoryPopupOpen: false,
-            isVerifyDeleteDocCategoryPopupOpen: false,
-            isNotifyFailOpen: false,
-            isNotifySuccessOpen: false
+            modalVisible: false,
+            selectedID: '',
+            isAnyItemClicked: false,
+            isAddJobTypePopupOpen: false,
+            jobTypeName: "",
+            jobTypeDesc: ""
         }
+
     }
 
-    componentDidmount() {
-        //call API for get list
+    async componentDidMount() {
+        await this.getAll();
     }
 
-    closeAllDocCategoryListItemActivated = () => {
-        console.log("A");
+    Modal = () => {
+        this.setState({
+            modalVisible: !this.state.modalVisible,
+        });
+    };
+
+    async getAll() {
+        await this.props.jobTypeStore.getAllJobType();
     }
 
-    render() {
+    handleCreate = () => {
 
+        this.setState({ isAddJobTypePopupOpen: true })
+        // this.props.jobTypeStore.createJobType(input);
+        this.getAll();
 
-        console.log(this.props.list_JobType);
+    };
+
+    async createOrUpdateModalOpen(entityDto: EntityDto) {
+        // await this.props.jobTypeStore.deleteJobType(entityDto);
+        this.Modal();
+    }
+
+    handleDelete = () => {
+
+    }
+
+    closeAllSelectedItem = () => {
+
+    }
+
+    handleEdit = () => {
+
+    }
+
+    handleItemClicked = (id: string) => {
+        let all_item = document.getElementsByClassName("custom-table-line-activated");
+
+        for (let i = 0; i < all_item.length; i++) {
+            all_item[i].className = "custom-table-line";
+        }
+
+        let selected_item: any = document.getElementById("job-type-list-item-" + id);
+        selected_item.className = "custom-table-line-activated";
+
+        this.setState({
+            isAnyItemClicked: true, selectedID: id
+        });
+
+    }
+
+    public render() {
+        const { jobTypes } = this.props.jobTypeStore;
+        if (jobTypes === undefined) return (<div></div >)
+
+        let list: any[];
+        list = jobTypes.items
 
         return (
-            <div>
-                <div className="Category_Dropdown_Title">
-                    {/* implement multi-language later */}
-                    Danh sách danh mục:
-              </div>
-                <ClickAwayListener onClickAway={() => { this.closeAllDocCategoryListItemActivated() }}>
-                    <div className="Category_Dropdown_Container  margin_top_5px" id="management-doc-categories-container">
-                        <div className="Custom_Table_Layout">
-                            <div className="Custom_Table_Header">
-                                <div className="Custom_Table-20percents_Header">Mã danh mục</div>
-                                <div className="Custom_Table_80percents_Header">Tên danh mục</div>
-                            </div>
-                            <div className="Custom_Table_Layout" >
-                                {/* {list_JobType.map(item =>
-                                    <jobTypeItem jobTypeDTO={item} ></jobTypeItem>
-                                )} */}
-                            </div>
-                        </div>
+            <div style={{ margin: "auto", marginTop: "20px", width: "60%" }}>
 
-                        <div className="Category_Buttons_Layout" >
-                            <div className="Simple_Blue_Button margin_right_5px">Thêm</div>
-                            <div className="Simple_White_Button margin_right_5px">Sửa</div>
-                            <div className="Simple_Red_Button">Xóa</div>
+                <div className="custom-table-layout" style={{ paddingBottom: "10px" }}>
+                    <div className="custom-table-header">
+                        <div className="custom-table-20percents-header">Mã</div>
+                        <div className="custom-table-40percents-header">Tên</div>
+                        <div className="custom-table-40percents-header">Mô tả</div>
+                    </div>
+                    <div>
+                        {list.map(
+                            item =>
+                                <ClickAwayListener onClickAway={() => { this.closeAllSelectedItem() }}>
+                                    <div className="custom-table-line" key={item.id} style={{ display: "flex" }} id={'job-type-list-item-' + item.id} onClick={() => this.handleItemClicked(item.id)}>
+                                        <div className="custom-table-item-20percents">{item.id}</div>
+                                        <div className="custom-table-item-40percents">{item.name}</div>
+                                        <div className="custom-table-item-40percents">{item.description}</div>
+                                    </div>
+                                </ClickAwayListener>
+                        )}
+                    </div>
+                </div>
+
+                <div className="Buttons_Layout"  >
+                    {this.isGranted('Pages.JobType.Create') && <div className="Simple_Blue_Button margin_right_5px" onClick={() => this.handleCreate()}>Thêm</div>}
+                    {this.isGranted('Pages.JobType.Update') && <div className="Simple_White_Button margin_right_5px" onClick={() => this.handleEdit()}>Sửa</div>}
+                    {this.isGranted('Pages.JobType.Delete') && <div className="Simple_Red_Button" onClick={() => this.handleDelete()}>Xóa</div>}
+                </div>
+
+                <CustomModal
+                    shadow={true}
+                    type="custom"
+                    title="Thêm loại công việc"
+                    open={this.state.isAddJobTypePopupOpen}
+                    closeModal={() => { this.setState({ isAddJobTypePopupOpen: false }); }}
+                >
+                    <div className="Custom_Modal_Body">
+                        <div>
+                            <div className="Simple_Gray_Label"> Tên loại công việc mới: </div>
+                            <input type="text" className="Simple_Text_Input" onChange={(e) => this.setState({ jobTypeName: e.target.value })} placeholder="Nhập tên loại công việc ..." />
+                            <div className="Simple_Gray_Label"> Mô tả: </div>
+                            <input type="text" className="Simple_Text_Input" onChange={(e) => this.setState({ jobTypeDesc: e.target.value })} placeholder="Nhập mô tả ..." />
                         </div>
                     </div>
-                </ClickAwayListener>
-            </div>
+
+                    <div className="Custom_Modal_Footer">
+                        <div className="Simple_Gray_Label">Xác nhận?</div>
+                        <div style={{ display: "flex" }}>
+                            <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerAddJobTypeConfirmation()}>OK</button>
+                            <button className="Simple_White_Button" onClick={() => { this.setState({ isAddJobTypePopupOpen: false }) }}>Cancel</button>
+                        </div>
+                    </div>
+                </CustomModal>
+
+                {/* <CustomModal
+                    shadow={true}
+                    type="custom"
+                    title="Cập nhật danh mục bài viết"
+                    open={this.isEditPostCategoryPopupOpen}
+                    closeModal={() => { this.isEditPostCategoryPopupOpen = false; this.setState({}); }}
+                >
+                    <div className="Custom_Modal_Body">
+                        <div className="Simple_Gray_Label"> Tên danh mục: </div>
+                        <input type="text" className="Simple_Text_Input" defaultValue={this.selected_category_name} />
+                    </div>
+
+                    <div className="Custom_Modal_Footer">
+                        <div className="Simple_Gray_Label">Xác nhận?</div>
+                        <div style={{ display: "flex" }}>
+                            <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyEditPostCategoryConfirmation()}>OK</button>
+                            <button className="Simple_White_Button" onClick={() => { this.isEditPostCategoryPopupOpen = false; this.setState({}) }}>Cancel</button>
+                        </div>
+                    </div>
+                </CustomModal> */}
+
+                {/* Popup for verifying delete post category */}
+                {/* <CustomModal
+                    shadow={true}
+                    type="confirmation"
+                    title={this.notifyHeader}
+                    text={this.notifyContent}
+                    open={this.isVerifyDeletePostCategoryPopupOpen}
+                    closeModal={() => { this.isVerifyDeletePostCategoryPopupOpen = false; this.setState({}); }}
+                >
+                    <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyDeletePostCategoryConfirmation()}>OK</button>
+                    <button className="Simple_White_Button" onClick={() => { this.isVerifyDeletePostCategoryPopupOpen = false; this.setState({}) }}>Cancel</button>
+                </CustomModal> */}
+
+                {/* Custom for notifing success */}
+                {/* <CustomModal
+                    open={this.isNotifySuccessOpen}
+                    shadow={true}
+                    title={this.notifyHeader}
+                    text={this.notifyContent}
+                    type="alert_success"
+                    closeModal={() => { this.isNotifySuccessOpen = false; this.setState({}) }}
+                >
+                </CustomModal> */}
+
+                {/* Custom for notifing fail */}
+                {/* <CustomModal
+                    open={this.isNotifyFailOpen}
+                    shadow={true}
+                    title={this.notifyHeader}
+                    text={this.notifyContent}
+                    type="alert_fail"
+                    closeModal={() => { this.isNotifyFailOpen = false; this.setState({}) }}
+                >
+                </CustomModal> */}
+            </div >
         );
+
+
     }
 
+    handlerAddJobTypeConfirmation = () => {
+        (document.getElementById('add-job-type-name-text-input'))
+        let dto: CreateOrUpdateJobTypeInput =
+        {
+            name: this.state.jobTypeName,
+            displayName: this.state.jobTypeName,
+            normalizedName: this.state.jobTypeName,
+            description: this.state.jobTypeDesc,
+            grantedPermissions: [
+                ""
+            ]
+        }
+        this.props.jobTypeStore.createJobType(dto);
+        this.setState({ isAddJobTypePopupOpen: false });
+    }
 }

@@ -27,7 +27,6 @@ http.interceptors.request.use(
     config.headers.common['Abp.TenantId'] = abp.multiTenancy.getTenantIdCookie();
     config.headers.common['Access-Control-Allow-Origin'] = "*";
     config.headers.common['crossdomain'] = true;
-    console.log(config);
     return config;
   },
   function (error) {

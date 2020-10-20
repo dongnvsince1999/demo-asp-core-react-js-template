@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import AuthenticationStore from 'shared/stores/authenticationStore';
-import Stores from 'shared/stores/storeIdentifier';
+import Stores from 'app/shared/stores/storeIdentifier';
 import { inject } from 'mobx-react';
 
 export interface ILogoutProps {
@@ -12,13 +12,11 @@ export interface ILogoutProps {
 class Logout extends React.Component<ILogoutProps> {
   componentDidMount() {
     this.props.authenticationStore!.logout();
-    console.log("logout");
-    // window.location.href = '/';
   }
 
   render() {
-    // co
-    return window.location.href = '/';
+    setTimeout(window.location.href = "/", 1000);
+    return <div></div>
   }
 }
 

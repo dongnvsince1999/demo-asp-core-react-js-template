@@ -54,6 +54,7 @@ class TenantStore {
   async getAll(pagedFilterAndSortedRequest: PagedTenantResultRequestDto) {
     let result = await tenantService.getAll(pagedFilterAndSortedRequest);
     this.tenants = result;
+    console.log(this.tenants)
   }
 }
 

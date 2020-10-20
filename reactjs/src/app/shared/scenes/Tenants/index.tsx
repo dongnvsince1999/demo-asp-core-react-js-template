@@ -7,7 +7,7 @@ import AppComponentBase from 'app/shared/components/AppComponentBase';
 import CreateOrUpdateTenant from './components/createOrUpdateTenant';
 import { EntityDto } from 'shared/services/dto/entityDto';
 import { L } from 'shared/lib/abpUtility';
-import Stores from 'shared/stores/storeIdentifier';
+import Stores from 'app/shared/stores/storeIdentifier';
 import TenantStore from 'shared/stores/tenantStore';
 
 export interface ITenantProps {
@@ -115,6 +115,7 @@ class Tenant extends AppComponentBase<ITenantProps, ITenantState> {
 
   public render() {
     const { tenants } = this.props.tenantStore;
+    console.log(tenants);
     const columns = [
       { title: L('TenancyName'), dataIndex: 'tenancyName', key: 'tenancyName', width: 150, render: (text: string) => <div>{text}</div> },
       { title: L('Name'), dataIndex: 'name', key: 'name', width: 150, render: (text: string) => <div>{text}</div> },

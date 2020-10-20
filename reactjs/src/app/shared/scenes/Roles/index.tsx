@@ -9,7 +9,7 @@ import { EntityDto } from 'shared/services/dto/entityDto';
 import { FormComponentProps } from 'antd/lib/form';
 import { L } from 'shared/lib/abpUtility';
 import RoleStore from 'shared/stores/roleStore';
-import Stores from 'shared/stores/storeIdentifier';
+import Stores from 'app/shared/stores/storeIdentifier';
 
 export interface IRoleProps extends FormComponentProps {
   roleStore: RoleStore;

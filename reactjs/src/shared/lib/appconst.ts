@@ -3,7 +3,7 @@ const AppConsts = {
     defaultAdminUserName: 'admin',
   },
   localization: {
-    defaultLocalizationSourceName: 'L11_DemoApp',
+    defaultLocalizationSourceName: 'L11_HelloWork',
   },
   authorization: {
     encrptedAuthTokenName: 'enc_auth_token',

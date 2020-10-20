@@ -9,10 +9,11 @@ import DocumentTitle from 'react-document-title';
 import Header from '../Header';
 import Footer from '../Footer';
 // import LanguageSelect from '../LanguageSelect';
-import { userRouter } from '../Router/router.config';
-// import { appRouters } from '../Router/router.config';
+// import { userRouter } from '../Router/router.config';
+import { navRouters } from '../Router/router.config';
 
 import utils from 'shared/utils/utils';
+// import ProtectedRoute from '../Router/ProtectedRoute';
 
 const { Content } = Layout;
 
@@ -33,18 +34,17 @@ class AppLayout extends React.Component<any> {
       location: { pathname },
     } = this.props;
 
-    const { path } = this.props.match;
+    // const { path } = this.props.match;
 
     const layout = (
       <Layout style={{ minHeight: '100vh' }}>
-        {console.log(path.length)}
         <Layout>
           <Layout.Header style={{ background: '#fff', minHeight: 52, padding: 0 }}>
             <Header collapsed={this.state.collapsed} toggle={this.toggle} />
           </Layout.Header>
           <Content style={{ margin: 16 }}>
             <Switch>
-              {userRouter
+              {navRouters
                 .filter((item: any) => !item.isLayout)
                 .map((route: any, index: any) => (
                   <Route

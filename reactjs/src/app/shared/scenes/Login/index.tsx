@@ -11,7 +11,7 @@ import { FormComponentProps } from 'antd/lib/form';
 import { L } from 'shared/lib/abpUtility';
 import { Redirect } from 'react-router-dom';
 import SessionStore from 'shared/stores/sessionStore';
-import Stores from 'shared/stores/storeIdentifier';
+import Stores from 'app/shared/stores/storeIdentifier';
 import TenantAvailabilityState from 'shared/services/account/dto/tenantAvailabilityState';
 import rules from './index.validation';
 

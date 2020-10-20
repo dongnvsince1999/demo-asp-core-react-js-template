@@ -1,6 +1,16 @@
+import Group1NavbarRouter from 'app/groups/group1/router';
 import LoadableComponent from '../Loadable/index';
-
+// import 
 //Maybe dashboard
+export interface IRouter {
+  path: string,
+  exact: boolean,
+  name: string,
+  permission: string,
+  title: string,
+  component: any,
+  showInNavbar: string,
+}
 
 export const userRouter: any = [
   {
@@ -20,25 +30,10 @@ export const userRouter: any = [
   },
 ];
 
-export const navRouters: any = [
-  {
-    path: '/job-type',
-    name: 'jobtype',
-    title: 'Loại công việc',
-    component: LoadableComponent(() => import('../Layout/AppLayout')),
-    isLayout: true,
-    showInMenu: true,
-  },
-  {
-    path: '/admin/job-type',
-    name: 'jobtype',
-    title: 'Quản lý loại công việc',
-    component: LoadableComponent(() => import('app/shared/scenes/Login')),
-    showInMenu: true,
-  },
-];
+export const navRouters: Array<IRouter> =
+  Group1NavbarRouter
 
-//cho dashboard
+
 export const managementRouters: any = [
   {
     path: '/',

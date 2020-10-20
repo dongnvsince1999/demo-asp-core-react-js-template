@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Avatar, Badge, Dropdown, Icon, Menu } from 'antd';
 
-import { L } from 'shared/lib/abpUtility';
+import { isGranted, L } from 'shared/lib/abpUtility';
 import LanguageSelect from '../LanguageSelect';
 import { Link } from 'react-router-dom';
 
@@ -34,46 +34,50 @@ export class Header extends React.Component<IHeaderProps> {
     //code for menu item
 
     return (
-      <div className={'header-nav-container'} >
+      <div className='header-nav-container' >
 
-        <div className = "header">
-
-        </div>
-
-        <div style={{ display: "flex" }}>
+        <div className="header">
           {window.location.pathname.substring(0, 5) === "/admin" ?
             <div style={{ textAlign: 'left' }} >
               <Icon className="trigger" type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={this.props.toggle} />
             </div> :
-
             <Link to="/">
-              <div style={{ width: "30px", height: "30px", background: "green" }} onClick={() => { }} >Logo</div>
+              <div style={{ width: "30px", height: "30px", background: "#c4c4c4" }} onClick={() => { }} >Logo</div>
             </Link>
           }
-          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Việc làm</div>
-          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Phỏng vấn</div>
-          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Công ty</div>
-          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} >Nhà tuyển dụng</div>
-
-          <Link style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} to="/admin">
-            Quản trị
-           </Link>
-          <Link style={{ padding: '0px 8px 0px 8px', textAlign: 'center' }} to="/job-type">
-            Demo
-           </Link>
-          <Link to="/admin/job-type">
-            Demo Admin
-           </Link>
-
+          <div style={{ padding: '0px 8px 0px 8px', textAlign: 'right' }} >
+            <LanguageSelect /> {' '}
+            <Dropdown overlay={userDropdownMenu} trigger={['click']}>
+              <Badge style={{}} count={3}>
+                <Avatar style={{ height: 24, width: 24 }} shape="circle" alt={'profile'} src={profilePicture} />
+              </Badge>
+            </Dropdown>
+          </div>
         </div>
-        <div style={{ padding: '0px 8px 0px 8px', textAlign: 'right' }} >
-          <LanguageSelect /> {' '}
-          <Dropdown overlay={userDropdownMenu} trigger={['click']}>
-            <Badge style={{}} count={3}>
-              <Avatar style={{ height: 24, width: 24 }} shape="circle" alt={'profile'} src={profilePicture} />
-            </Badge>
-          </Dropdown>
-        </div>
+
+        <div className="navbar">
+          <div style={{ display: "flex" }}>
+            <div style={{ padding: '0px 8px 0px 8px' }} >Việc làm</div>
+            <div style={{ padding: '0px 8px 0px 8px' }} >Phỏng vấn</div>
+            <div style={{ padding: '0px 8px 0px 8px' }} >Công ty</div>
+            <div style={{ padding: '0px 8px 0px 8px' }} >Nhà tuyển dụng</div>
+            <Link style={{ padding: '0px 8px 0px 8px' }} to="/job-type">
+              Demo
+           </Link>
+          </div>
+
+          <div style={{ display: "flex" }}>
+            {
+              (isGranted('Pages.Roles') && isGranted('Pages.Tenants') && isGranted('Pages.Users')) &&
+              <Link style={{ padding: '0px 8px 0px 8px' }} to="/admin">
+                Quản trị
+           </Link>
+            }
+            <Link style={{ padding: '0px 8px 0px 8px' }} to="/admin/job-type">
+              Demo_permission
+           </Link>
+          </div>
+        </div >
       </div >
     );
   }

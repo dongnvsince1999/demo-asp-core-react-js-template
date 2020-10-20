@@ -7,7 +7,7 @@ import AppComponentBase from 'app/shared/components/AppComponentBase';
 import CreateOrUpdateUser from './components/createOrUpdateUser';
 import { EntityDto } from 'shared/services/dto/entityDto';
 import { L } from 'shared/lib/abpUtility';
-import Stores from 'shared/stores/storeIdentifier';
+import Stores from 'app/shared/stores/storeIdentifier';
 import UserStore from 'shared/stores/userStore';
 
 export interface IUserProps {
