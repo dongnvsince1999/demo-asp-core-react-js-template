@@ -9,7 +9,7 @@ import LanguageSelect from '../LanguageSelect';
 import { Link } from 'react-router-dom';
 
 import profilePicture from 'assets/images/user.png';
-// import Logout from 'components/Logout';
+import { navRouters } from '../Router/router.config';
 
 export interface IHeaderProps {
   collapsed?: any;
@@ -57,25 +57,35 @@ export class Header extends React.Component<IHeaderProps> {
 
         <div className="navbar">
           <div style={{ display: "flex" }}>
-            <div style={{ padding: '0px 8px 0px 8px' }} >Việc làm</div>
-            <div style={{ padding: '0px 8px 0px 8px' }} >Phỏng vấn</div>
-            <div style={{ padding: '0px 8px 0px 8px' }} >Công ty</div>
-            <div style={{ padding: '0px 8px 0px 8px' }} >Nhà tuyển dụng</div>
-            <Link style={{ padding: '0px 8px 0px 8px' }} to="/job-type">
-              Demo
-           </Link>
+            {navRouters.map(item =>
+              item.showInNavbar === "left" ?
+                <Link style={{ padding: '0px 8px 0px 8px' }} to={item.path}>
+                  {item.title}
+                </Link>
+                :
+                <div></div>)
+            }
           </div>
 
           <div style={{ display: "flex" }}>
+
+
+            <div style={{ display: "flex" }}>
+              {navRouters.map(item =>
+                item.showInNavbar === "right" ?
+                  <Link style={{ padding: '0px 8px 0px 8px' }} to={item.path}>
+                    {item.title}
+                  </Link>
+                  :
+                  <div></div>)
+              }
+            </div>
             {
               (isGranted('Pages.Roles') && isGranted('Pages.Tenants') && isGranted('Pages.Users')) &&
               <Link style={{ padding: '0px 8px 0px 8px' }} to="/admin">
                 Quản trị
-           </Link>
+             </Link>
             }
-            <Link style={{ padding: '0px 8px 0px 8px' }} to="/admin/job-type">
-              Demo_permission
-           </Link>
           </div>
         </div >
       </div >

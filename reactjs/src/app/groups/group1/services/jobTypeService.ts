@@ -1,7 +1,7 @@
 import { EntityDto } from 'shared/services/dto/entityDto';
 // import { PagedResultDto } from 'shared/services/dto/pagedResultDto';
 import http from 'shared/services/httpService';
-import { CreateOrUpdateJobTypeInput } from './dto/jobTypeDTO/createOrUpdateJobTypeInput';
+import { CreateJobTypeInput } from './dto/jobTypeDTO/createOrUpdateJobTypeInput';
 import { GetAllJobTypeOutput } from './dto/jobTypeDTO/getAllJobTypeOutput';
 import { UpdateJobTypeInput } from './dto/jobTypeDTO/UpdateJobTypeInput';
 import {IJobTypeItem} from '../stores/jobTypeStore'
@@ -11,7 +11,7 @@ class JobTypeService {
     return result.data.result;
   }
 
-  public async create(createJobTypeInput: CreateOrUpdateJobTypeInput) {
+  public async create(createJobTypeInput: CreateJobTypeInput) {
     let result = await http.post('/api/services/app/JobType/CreateJobType', createJobTypeInput);
     return result.data.result;
   }
@@ -23,6 +23,11 @@ class JobTypeService {
 
   public async delete(entityDto: EntityDto) {
     let result = await http.delete('api/services/app/JobType/DeleteJobType', { params: entityDto });
+    return result.data;
+  }
+
+  public async getJobTypeByID(entityDto: EntityDto) {
+    let result = await http.get('/api/JobTypes/Get/' + entityDto.id);
     return result.data;
   }
 

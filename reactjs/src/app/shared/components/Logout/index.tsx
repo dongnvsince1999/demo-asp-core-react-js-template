@@ -15,8 +15,10 @@ class Logout extends React.Component<ILogoutProps> {
   }
 
   render() {
-    setTimeout(window.location.href = "/", 1000);
-    return <div></div>
+    return <div>
+
+      {window.location.href = "/"}
+    </div>
   }
 }
 

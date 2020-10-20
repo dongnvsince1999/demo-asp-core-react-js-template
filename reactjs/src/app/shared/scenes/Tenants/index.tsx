@@ -115,7 +115,7 @@ class Tenant extends AppComponentBase<ITenantProps, ITenantState> {
 
   public render() {
     const { tenants } = this.props.tenantStore;
-    console.log(tenants);
+    
     const columns = [
       { title: L('TenancyName'), dataIndex: 'tenancyName', key: 'tenancyName', width: 150, render: (text: string) => <div>{text}</div> },
       { title: L('Name'), dataIndex: 'name', key: 'name', width: 150, render: (text: string) => <div>{text}</div> },

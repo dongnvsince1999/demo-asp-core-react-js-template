@@ -40,7 +40,6 @@ const Router = () => {
           <Route path={route.path} key={route.path} exact={route.exact} render={(props: any) => <AppLayout {...props} />} />
       )}
 
-
     </Switch>
   );
 };

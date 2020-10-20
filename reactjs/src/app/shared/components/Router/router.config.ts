@@ -54,7 +54,6 @@ export const managementRouters: any = [
     icon: 'home',
     showInMenu: true,
     component: LoadableComponent(() => import('../Layout/ManagementLayout')),
-    // component: LoadableComponent(() => import('app/shared/scenes/Dashboard'))
 
   },
   {

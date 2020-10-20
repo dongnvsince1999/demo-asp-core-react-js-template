@@ -2,7 +2,7 @@ import { action, observable } from 'mobx';
 import { EntityDto } from 'shared/services/dto/entityDto';
 // import { PagedResultDto } from 'shared/services/dto/pagedResultDto';
 // import { EntityDto } from 'shared/services/dto/entityDto';
-import { CreateOrUpdateJobTypeInput } from '../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
+import { CreateJobTypeInput } from '../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
 import { GetAllJobTypeOutput } from '../services/dto/jobTypeDTO/getAllJobTypeOutput';
 // import { UpdateJobTypeInput } from '../services/dto/jobTypeDTO/UpdateJobTypeInput';
 
@@ -14,12 +14,14 @@ export interface IJobTypeItem {
     isStatic: boolean,
     isDefault: boolean,
     creationTime: any,
-    id: 0
+    id: number
 }
 
 class JobTypeStore {
 
     @observable jobTypes!: GetAllJobTypeOutput<IJobTypeItem>;
+    @observable jobType!: IJobTypeItem;
+
     @action
     async getAllJobType() {
         let result = await jobTypeService.getAll();
@@ -28,11 +30,16 @@ class JobTypeStore {
     }
 
     @action
-    async createJobType(createJobTypeInput: CreateOrUpdateJobTypeInput) {
+    async createJobType(createJobTypeInput: CreateJobTypeInput) {
         let result = await jobTypeService.create(createJobTypeInput);
         this.jobTypes.items.push(result);
     }
 
+    @action
+    async getJobTypeByID(dto: EntityDto) {
+        let result = await jobTypeService.getJobTypeByID(dto);
+        this.jobType = result;
+    }
     // @action
     // async update(updateUserInput: UpdateJobTypeInput) {
     //     // let result = await userService.update(updateUserInput);

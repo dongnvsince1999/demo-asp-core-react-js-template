@@ -1,5 +1,5 @@
 
-export interface CreateOrUpdateJobTypeInput {
+export interface CreateJobTypeInput {
     name: string,
     displayName: string,
     normalizedName: string,
@@ -7,4 +7,8 @@ export interface CreateOrUpdateJobTypeInput {
     grantedPermissions: [
         string
     ]
+}
+
+export interface UpdateJobTypeInput extends CreateJobTypeInput {
+    id: number
 }

@@ -8,8 +8,10 @@ import CustomModal from 'app/shared/components/CustomModal/CustomModal'
 import AppComponentBase from 'app/shared/components/AppComponentBase';
 import Stores from 'app/shared/stores/storeIdentifier';
 import JobTypeStore from '../../stores/jobTypeStore';
+import { CreateJobTypeInput } from '../../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
+// import { UpdateJobTypeInput } from '../../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
 import { EntityDto } from 'shared/services/dto/entityDto';
-import { CreateOrUpdateJobTypeInput } from '../../services/dto/jobTypeDTO/createOrUpdateJobTypeInput';
+
 
 export interface IJobTypeListProps {
     jobTypeStore: JobTypeStore;
@@ -17,11 +19,13 @@ export interface IJobTypeListProps {
 
 export interface IJobTypeListState {
     modalVisible: boolean;
-    selectedID: string;
+    selectedID: number;
     isAnyItemClicked: boolean;
     isAddJobTypePopupOpen: boolean;
     jobTypeName: string,
-    jobTypeDesc: string
+    jobTypeDesc: string,
+    isEditJobTypePopupOpen: boolean,
+    isVerifyDeletePopupOpen: boolean
 }
 
 
@@ -35,11 +39,13 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
         super(props);
         this.state = {
             modalVisible: false,
-            selectedID: '',
+            selectedID: 0,
             isAnyItemClicked: false,
             isAddJobTypePopupOpen: false,
             jobTypeName: "",
-            jobTypeDesc: ""
+            jobTypeDesc: "",
+            isEditJobTypePopupOpen: false,
+            isVerifyDeletePopupOpen: false,
         }
 
     }
@@ -59,17 +65,8 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
     }
 
     handleCreate = () => {
-
         this.setState({ isAddJobTypePopupOpen: true })
-        // this.props.jobTypeStore.createJobType(input);
-        this.getAll();
-
     };
-
-    async createOrUpdateModalOpen(entityDto: EntityDto) {
-        // await this.props.jobTypeStore.deleteJobType(entityDto);
-        this.Modal();
-    }
 
     handleDelete = () => {
 
@@ -83,7 +80,7 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
 
     }
 
-    handleItemClicked = (id: string) => {
+    handleItemClicked = (id: number) => {
         let all_item = document.getElementsByClassName("custom-table-line-activated");
 
         for (let i = 0; i < all_item.length; i++) {
@@ -130,9 +127,9 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
                 </div>
 
                 <div className="Buttons_Layout"  >
-                    {this.isGranted('Pages.JobType.Create') && <div className="Simple_Blue_Button margin_right_5px" onClick={() => this.handleCreate()}>Thêm</div>}
-                    {this.isGranted('Pages.JobType.Update') && <div className="Simple_White_Button margin_right_5px" onClick={() => this.handleEdit()}>Sửa</div>}
-                    {this.isGranted('Pages.JobType.Delete') && <div className="Simple_Red_Button" onClick={() => this.handleDelete()}>Xóa</div>}
+                    {this.isGranted('Pages.JobType.Create') && <button type="button" className="Simple_Blue_Button margin_right_5px" onClick={() => this.handleCreate()}>Thêm</button>}
+                    {this.isGranted('Pages.JobType.Update') && <button type="button" className="Simple_White_Button margin_right_5px" disabled onClick={() => this.setState({ isEditJobTypePopupOpen: true })}>Sửa</button>}
+                    {this.isGranted('Pages.JobType.Delete') && <button type="button" className="Simple_Red_Button" disabled={!this.state.isAnyItemClicked} onClick={() => this.setState({ isVerifyDeletePopupOpen: true })}>Xóa</button>}
                 </div>
 
                 <CustomModal
@@ -160,61 +157,45 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
                     </div>
                 </CustomModal>
 
-                {/* <CustomModal
+                <CustomModal
                     shadow={true}
                     type="custom"
-                    title="Cập nhật danh mục bài viết"
-                    open={this.isEditPostCategoryPopupOpen}
-                    closeModal={() => { this.isEditPostCategoryPopupOpen = false; this.setState({}); }}
+                    title="Cập nhật loại công việc"
+                    open={this.state.isEditJobTypePopupOpen}
+                    closeModal={() => { this.setState({ isEditJobTypePopupOpen: false }); }}
                 >
                     <div className="Custom_Modal_Body">
-                        <div className="Simple_Gray_Label"> Tên danh mục: </div>
-                        <input type="text" className="Simple_Text_Input" defaultValue={this.selected_category_name} />
+                        <div>
+                            <div className="Simple_Gray_Label"> Tên loại công việc mới: </div>
+                            <input type="text" className="Simple_Text_Input" onChange={(e) => this.setState({ jobTypeName: e.target.value })} placeholder="Nhập tên loại công việc ..." />
+                            <div className="Simple_Gray_Label"> Mô tả: </div>
+                            <input type="text" className="Simple_Text_Input" onChange={(e) => this.setState({ jobTypeDesc: e.target.value })} placeholder="Nhập mô tả ..." />
+                        </div>
                     </div>
 
                     <div className="Custom_Modal_Footer">
                         <div className="Simple_Gray_Label">Xác nhận?</div>
                         <div style={{ display: "flex" }}>
-                            <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyEditPostCategoryConfirmation()}>OK</button>
-                            <button className="Simple_White_Button" onClick={() => { this.isEditPostCategoryPopupOpen = false; this.setState({}) }}>Cancel</button>
+                            <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyEditJobTypeConfirmation()}>OK</button>
+                            <button className="Simple_White_Button" onClick={() => { this.setState({ isEditJobTypePopupOpen: false }); this.getJobTypeByID() }}>Cancel</button>
                         </div>
                     </div>
-                </CustomModal> */}
+                </CustomModal>
 
                 {/* Popup for verifying delete post category */}
-                {/* <CustomModal
+                <CustomModal
                     shadow={true}
                     type="confirmation"
-                    title={this.notifyHeader}
-                    text={this.notifyContent}
-                    open={this.isVerifyDeletePostCategoryPopupOpen}
-                    closeModal={() => { this.isVerifyDeletePostCategoryPopupOpen = false; this.setState({}); }}
+                    title={"Xác nhận"}
+                    text={"Bạn có muốn xóa loại công việc này?"}
+                    open={this.state.isVerifyDeletePopupOpen}
+                    closeModal={() => { this.setState({ isVerifyDeletePopupOpen: false }); }}
                 >
-                    <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyDeletePostCategoryConfirmation()}>OK</button>
-                    <button className="Simple_White_Button" onClick={() => { this.isVerifyDeletePostCategoryPopupOpen = false; this.setState({}) }}>Cancel</button>
-                </CustomModal> */}
+                    <button className="Simple_Blue_Button margin_right_5px" onClick={() => this.handlerVerifyDeleteJobTypeConfirmation()}>OK</button>
+                    <button className="Simple_White_Button" onClick={() => { this.setState({ isVerifyDeletePopupOpen: false }) }}>Cancel</button>
+                </CustomModal>
 
-                {/* Custom for notifing success */}
-                {/* <CustomModal
-                    open={this.isNotifySuccessOpen}
-                    shadow={true}
-                    title={this.notifyHeader}
-                    text={this.notifyContent}
-                    type="alert_success"
-                    closeModal={() => { this.isNotifySuccessOpen = false; this.setState({}) }}
-                >
-                </CustomModal> */}
 
-                {/* Custom for notifing fail */}
-                {/* <CustomModal
-                    open={this.isNotifyFailOpen}
-                    shadow={true}
-                    title={this.notifyHeader}
-                    text={this.notifyContent}
-                    type="alert_fail"
-                    closeModal={() => { this.isNotifyFailOpen = false; this.setState({}) }}
-                >
-                </CustomModal> */}
             </div >
         );
 
@@ -222,8 +203,8 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
     }
 
     handlerAddJobTypeConfirmation = () => {
-        (document.getElementById('add-job-type-name-text-input'))
-        let dto: CreateOrUpdateJobTypeInput =
+
+        let dto: CreateJobTypeInput =
         {
             name: this.state.jobTypeName,
             displayName: this.state.jobTypeName,
@@ -236,4 +217,24 @@ export default class JobTypeList extends AppComponentBase<IJobTypeListProps, IJo
         this.props.jobTypeStore.createJobType(dto);
         this.setState({ isAddJobTypePopupOpen: false });
     }
+
+    async getJobTypeByID() {
+        let dto: EntityDto = {
+            id: this.state.selectedID
+        }
+        await this.props.jobTypeStore.getJobTypeByID(dto);
+    }
+
+    handlerVerifyEditJobTypeConfirmation = () => {
+
+    }
+
+    handlerVerifyDeleteJobTypeConfirmation = () => {
+        let dto: EntityDto = {
+            id: this.state.selectedID
+        }
+        this.props.jobTypeStore.deleteJobType(dto);
+        this.setState({ isVerifyDeletePopupOpen: false });
+    }
+
 }
